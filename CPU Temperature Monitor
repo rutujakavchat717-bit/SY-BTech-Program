@@ -1,0 +1,14 @@
+#include<stdio.h>
+void main() 
+{
+    float cpuTemp;
+    printf("Enter CPU Temperature: ");
+    scanf("%f", &cpuTemp);
+
+    if(cpuTemp < 60)
+        printf("CPU Status: Cool");
+    else if(cpuTemp <= 80)
+        printf("CPU Status: Optimal");
+    else
+        printf("CPU Status: Overheating");
+}
