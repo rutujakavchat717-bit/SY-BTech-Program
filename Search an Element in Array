@@ -1,0 +1,10 @@
+#include <stdio.h>
+int main() 
+{
+    int a[5]={10,20,30,40,50},n,i,found=0;
+    scanf("%d",&n);
+    for(i=0;i<5;i++) if(a[i]==n) found=1;
+    if(found) printf("Found");
+    else printf("Not Found");
+    return 0;
+}
