@@ -1,0 +1,12 @@
+#include <stdio.h>
+void main() 
+{
+    int duty_cycle = 4, period = 7;
+    printf("PWM 14: ");
+    int i = 0;
+    while(i < period) {
+        printf(i < duty_cycle ? "*" : ".");
+        i++;
+    }
+    printf("\n");
+}
