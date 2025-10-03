@@ -1,0 +1,14 @@
+#include<stdio.h>
+void main() 
+{
+    float waterTemp;
+    printf("Enter water temperature (°C): ");
+    scanf("%f", &waterTemp);
+
+    if(waterTemp < 0)
+        printf("State: Solid (Ice)");
+    else if(waterTemp <= 100)
+        printf("State: Liquid");
+    else
+        printf("State: Gas (Steam)");
+}
