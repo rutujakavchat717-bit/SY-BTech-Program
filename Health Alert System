@@ -1,0 +1,14 @@
+#include<stdio.h>
+void main() 
+{
+    float temp;
+    printf("Enter patient temperature: ");
+    scanf("%f", &temp);
+
+    if(temp < 95)
+        printf("Status: Hypothermia");
+    else if(temp <= 99)
+        printf("Status: Normal");
+    else
+        printf("Status: Fever");
+}
