@@ -1,0 +1,14 @@
+#include<stdio.h>
+void main() 
+{
+    float engineTemp;
+    printf("Enter engine temperature (°C): ");
+    scanf("%f", &engineTemp);
+
+    if(engineTemp < 90)
+        printf("Engine Status: Normal");
+    else if(engineTemp < 110)
+        printf("Engine Status: Warning");
+    else
+        printf("Engine Status: Overheating");
+}
