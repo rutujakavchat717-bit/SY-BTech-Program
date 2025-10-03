@@ -1,0 +1,14 @@
+#include<stdio.h>
+void main() 
+{
+    float temp;
+    printf("Enter ambient temperature: ");
+    scanf("%f", &temp);
+
+    if(temp > 45)
+        printf("Fire Risk: High");
+    else if(temp > 35)
+        printf("Fire Risk: Moderate");
+    else
+        printf("Fire Risk: Low");
+}
