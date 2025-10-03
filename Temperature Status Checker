@@ -1,0 +1,17 @@
+#include<stdio.h>
+
+void main() 
+{
+    float Critical_temp = 100, Body_Temp, Threshold = 80;
+
+    printf("Enter Your Temperature: ");
+    scanf("%f", &Body_Temp);
+
+    if (Body_Temp <= Threshold) {
+        printf("Body Status: Normal");
+    } else if (Body_Temp < Critical_temp) {
+        printf("Body Status: Warning");
+    } else {
+        printf("Body Status: Critical");
+    }
+}
