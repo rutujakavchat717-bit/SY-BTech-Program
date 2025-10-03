@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include <string.h>
+int main() 
+{
+    char s[50];
+    gets(s);
+    strrev(s);  // works in Turbo C; use loop in GCC
+    printf("Reverse=%s",s);
+    return 0;
+}
