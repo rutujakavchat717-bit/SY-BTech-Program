@@ -1,0 +1,14 @@
+#include<stdio.h>
+void main() 
+{
+    float temp;
+    printf("Enter room temperature: ");
+    scanf("%f", &temp);
+
+    if(temp < 18)
+        printf("Heating ON");
+    else if(temp > 26)
+        printf("Cooling ON");
+    else
+        printf("Thermostat Status: Ideal");
+}
