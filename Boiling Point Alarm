@@ -1,0 +1,12 @@
+#include<stdio.h>
+void main() 
+{
+    float temp;
+    printf("Enter temperature of liquid: ");
+    scanf("%f", &temp);
+
+    if(temp >= 100)
+        printf("Warning: Liquid is boiling!");
+    else
+        printf("Liquid is safe.");
+}
