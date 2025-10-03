@@ -1,0 +1,14 @@
+#include<stdio.h>
+void main() 
+{
+    float batteryTemp;
+    printf("Enter battery temperature: ");
+    scanf("%f", &batteryTemp);
+
+    if(batteryTemp < 20)
+        printf("Battery Cold");
+    else if(batteryTemp <= 40)
+        printf("Battery Normal");
+    else
+        printf("Battery Hot");
+}
