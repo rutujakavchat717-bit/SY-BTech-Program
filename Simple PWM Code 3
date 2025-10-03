@@ -1,0 +1,11 @@
+#include<stdio.h>
+void main() 
+{
+    int duty_cycle = 4, period = 10, i = 0;
+    printf("PWM 3: ");
+    while(i < period) {
+        if(i < duty_cycle) printf("1"); else printf("0");
+        i++;
+    }
+    printf("\n");
+}
