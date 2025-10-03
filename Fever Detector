@@ -1,0 +1,12 @@
+#include<stdio.h>
+void main() 
+{
+    float temp;
+    printf("Enter body temperature (°F): ");
+    scanf("%f", &temp);
+
+    if(temp > 98.6)
+        printf("You may have a fever.");
+    else
+        printf("Your temperature is normal.");
+}
