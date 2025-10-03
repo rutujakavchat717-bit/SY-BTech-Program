@@ -1,0 +1,9 @@
+#include <stdio.h>
+void main() 
+{
+    int duty_cycle = 4, period = 8;
+    printf("PWM 19: ");
+    for(int i = 0; i < period; i++)
+        printf(i < duty_cycle ? "X" : "O");
+    printf("\n");
+}
