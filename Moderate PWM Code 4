@@ -1,0 +1,13 @@
+#include <stdio.h>
+void main() 
+{
+    int duty, period;
+    printf("Enter duty (PWM 4): "); scanf("%d", &duty);
+    printf("Enter period: "); scanf("%d", &period);
+    printf("PWM 4 Grid:\n");
+    for(int row = 0; row < 3; row++) {
+        for(int i = 0; i < period; i++)
+            printf(i < duty ? "1" : "0");
+        printf("\n");
+    }
+}
