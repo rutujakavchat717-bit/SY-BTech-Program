@@ -1,0 +1,14 @@
+#include <stdio.h>
+void main() 
+{
+    int duty, period, cycles;
+    printf("Enter duty cycle: "); scanf("%d", &duty);
+    printf("Enter period: "); scanf("%d", &period);
+    printf("Enter number of PWM cycles: "); scanf("%d", &cycles);
+
+    for(int c = 0; c < cycles; c++) {
+        for(int i = 0; i < period; i++)
+            printf(i < duty ? "1" : "0");
+        printf("\n");
+    }
+}
