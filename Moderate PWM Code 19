@@ -1,0 +1,10 @@
+#include <stdio.h>
+void main() 
+{
+    int duty, period;
+    printf("Enter duty and period: "); scanf("%d %d", &duty, &period);
+    printf("PWM 19 with index: ");
+    for(int i = 0; i < period; i++)
+        printf("%d", (i < duty));
+    printf("\n");
+}
