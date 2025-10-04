@@ -1,0 +1,9 @@
+#include <stdio.h>
+void main() 
+{
+    int duty = 3, period = 8;
+    printf("PWM 12 (Short): ");
+    for (int i = 0; i < period; i++)
+        printf(i < duty ? "▲" : "▼");
+    printf("\n");
+}
