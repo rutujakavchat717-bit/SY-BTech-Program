@@ -1,0 +1,12 @@
+#include <stdio.h>
+void main() 
+{
+    int duty = 6, period = 12;
+    printf("PWM 11 (Dynamic steps):\n");
+    for (int j = 1; j <= duty; j++) 
+{
+        for (int i = 0; i < period; i++)
+            printf(i < j ? "1" : "0");
+        printf("\n");
+}
+}
