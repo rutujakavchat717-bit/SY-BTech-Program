@@ -1,0 +1,8 @@
+#include <stdio.h>
+void main() 
+{
+    int duty = 3, period = 8;
+    for (int i = 0; i < period; i++)
+        printf(i < duty ? "0" : "1");
+    printf("\n");
+}
