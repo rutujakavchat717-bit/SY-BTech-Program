@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <unistd.h>
+void main()
+{
+    int duty = 4, period = 8;
+    printf("PWM HARD 5: Blinking LED Simulation\n");
+    for (int t = 0; t < 5; t++) 
+{
+        for (int i = 0; i < period; i++) 
+{
+            if (i < duty) printf("ON ");
+            else printf("OFF ");
+}
+        printf("\n");
+        sleep(1);
+   }
+}
