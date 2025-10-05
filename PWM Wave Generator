@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <unistd.h>
+void main()
+{
+int duty = 6, period = 12, cycles = 3;
+    printf("PWM HARD 8: Multi-Cycle Wave\n");
+    for (int c = 0; c < cycles; c++) 
+{
+        for (int i = 0; i < period; i++)
+            printf(i < duty ? "1" : "0");
+        printf(" ");
+}
+    printf("\n");
+}
