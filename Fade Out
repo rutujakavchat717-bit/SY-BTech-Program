@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <unistd.h>
+void main() 
+{
+    int period = 20;
+    printf("PWM HARD 2: Fade Out\n");
+    for (int duty = period; duty >= 0; duty--) ]
+{
+        for (int i = 0; i < period; i++)
+            printf(i < duty ? "1" : "0");
+        printf("\n");
+        usleep(200000);
+ }
+}
