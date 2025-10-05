@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <unistd.h>
+void main()
+{
+int dutyA = 4, dutyB = 6, dutyC = 8, period = 10;
+    printf("PWM HARD 10: 3-Phase Simulation\n");
+    printf("A\tB\tC\n");
+    for (int i = 0; i < period; i++) 
+{
+        printf("%c\t%c\t%c\n",
+               (i < dutyA ? '1' : '0'),
+               (i < dutyB ? '1' : '0'),
+               (i < dutyC ? '1' : '0'));
+}
+}
