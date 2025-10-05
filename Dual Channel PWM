@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <unistd.h>
+void main() 
+{
+int duty1 = 5, duty2 = 10, period = 20;
+    printf("PWM HARD 3: Dual Channel Output\n");
+    for (int i = 0; i < period; i++) 
+{ 
+  printf("%c %c\n", (i < duty1 ? '1' : '0'), (i < duty2 ? '1' : '0'));
+}
+}
