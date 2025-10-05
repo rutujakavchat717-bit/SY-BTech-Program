@@ -1,0 +1,8 @@
+#include <stdio.h>
+void main() 
+{
+    int duty1 = 3, duty2 = 6, period = 10;
+    printf("PWM1 PWM2\n");
+    for (int i = 0; i < period; i++)
+    printf("%c   %c\n", (i < duty1 ? '1' : '0'), (i < duty2 ? '1' : '0'));
+}
