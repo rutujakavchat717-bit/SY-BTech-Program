@@ -1,0 +1,17 @@
+#include <stdio.h>
+float total(float exp[], int n) 
+{
+    float sum = 0;
+    for(int i = 0; i < n; i++)
+        sum += exp[i];
+    return sum;
+}
+int main() 
+{
+    float exp[5];
+    printf("Enter 5 expenses: ");
+    for(int i = 0; i < 5; i++)
+        scanf("%f", &exp[i]);
+    printf("Total Expense = %.2f\n", total(exp, 5));
+    return 0;
+}
