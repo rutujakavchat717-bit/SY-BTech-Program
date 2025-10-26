@@ -1,0 +1,17 @@
+#include <stdio.h>
+float totalUnits(float u[], int n) 
+{
+    float total = 0;
+    for(int i = 0; i < n; i++)
+        total += u[i];
+    return total;
+}
+int main() 
+{
+    float u[5];
+    printf("Enter electricity units of 5 months: ");
+    for(int i = 0; i < 5; i++)
+        scanf("%f", &u[i]);
+    printf("Total Units Consumed = %.2f\n", totalUnits(u, 5));
+    return 0;
+}
