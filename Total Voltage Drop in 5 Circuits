@@ -1,0 +1,17 @@
+#include <stdio.h>
+float totalVoltage(float v[], int n) 
+{
+    float sum = 0;
+    for(int i = 0; i < n; i++)
+        sum += v[i];
+    return sum;
+}
+int main() 
+{
+    float v[5];
+    printf("Enter voltage drop of 5 circuits (in V): ");
+    for(int i = 0; i < 5; i++)
+        scanf("%f", &v[i]);
+    printf("Total Voltage Drop = %.2f V\n", totalVoltage(v, 5));
+    return 0;
+}
