@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+    int profile;
+    printf("Select Sound Profile:\n1. Silent\n2. Vibrate\n3. Ring\nEnter choice: ");
+    scanf("%d", &profile);
+    switch(profile) 
+{
+        case 1: printf("Phone set to SILENT.\n"); break;
+        case 2: printf("Phone set to VIBRATE.\n"); break;
+        case 3: printf("Phone set to RING.\n"); break;
+        default: printf("Invalid profile.\n");
+    }
+    return 0;
+}
