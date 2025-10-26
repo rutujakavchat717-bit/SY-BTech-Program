@@ -1,0 +1,17 @@
+#include <stdio.h>
+float avgSpeed(float s[], int n) 
+{
+    float total = 0;
+    for(int i = 0; i < n; i++)
+        total += s[i];
+    return total / n;
+}
+int main() 
+{
+    float s[5];
+    printf("Enter speed of 5 cyclists (in km/h): ");
+    for(int i = 0; i < 5; i++)
+        scanf("%f", &s[i]);
+    printf("Average Speed = %.2f km/h\n", avgSpeed(s, 5));
+    return 0;
+}
