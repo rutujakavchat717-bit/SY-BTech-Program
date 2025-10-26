@@ -1,0 +1,17 @@
+#include <stdio.h>
+float avgLight(float l[], int n) 
+{
+    float total = 0;
+    for(int i = 0; i < n; i++)
+        total += l[i];
+    return total / n;
+}
+int main() 
+{
+    float l[5];
+    printf("Enter 5 light intensity readings (in lux): ");
+    for(int i = 0; i < 5; i++)
+        scanf("%f", &l[i]);
+    printf("Average Light Intensity = %.2f lux\n", avgLight(l, 5));
+    return 0;
+}
