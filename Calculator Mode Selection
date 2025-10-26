@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+    int mode;
+    printf("Select Calculator Mode:\n1. Standard\n2. Scientific\n3. Programmer\nEnter your choice: ");
+    scanf("%d", &mode);
+    switch(mode) 
+{
+        case 1: printf("Standard mode selected.\n"); break;
+        case 2: printf("Scientific mode selected.\n"); break;
+        case 3: printf("Programmer mode selected.\n"); break;
+        default: printf("Invalid mode.\n");
+    }
+    return 0;
+}
