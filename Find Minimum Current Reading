@@ -1,0 +1,18 @@
+#include <stdio.h>
+float minCurrent(float c[], int n) 
+{
+    float min = c[0];
+    for(int i = 1; i < n; i++)
+        if(c[i] < min)
+            min = c[i];
+    return min;
+}
+int main() 
+{
+    float c[5];
+    printf("Enter 5 current readings (in A): ");
+    for(int i = 0; i < 5; i++)
+        scanf("%f", &c[i]);
+    printf("Minimum Current = %.2f A\n", minCurrent(c, 5));
+    return 0;
+}
