@@ -1,0 +1,17 @@
+#include <stdio.h>
+float avgTime(float t[], int n) 
+{
+    float sum = 0;
+    for(int i = 0; i < n; i++)
+        sum += t[i];
+    return sum / n;
+}
+int main() 
+{
+    float t[5];
+    printf("Enter time (in seconds) for 5 races: ");
+    for(int i = 0; i < 5; i++)
+        scanf("%f", &t[i]);
+    printf("Average Race Time = %.2f s\n", avgTime(t, 5));
+    return 0;
+}
