@@ -1,0 +1,17 @@
+#include <stdio.h>
+float avgCurrent(float current[], int n) 
+{
+    float sum = 0;
+    for(int i = 0; i < n; i++)
+        sum += current[i];
+    return sum / n;
+}
+int main() 
+{
+    float current[5];
+    printf("Enter current of 5 circuits (in A): ");
+    for(int i = 0; i < 5; i++)
+        scanf("%f", &current[i]);
+    printf("Average Current = %.2f A\n", avgCurrent(current, 5));
+    return 0;
+}
