@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main() 
+{
+    int mode;
+    printf("Camera Modes:\n1. Photo\n2. Video\n3. Panorama\n4. Portrait\nEnter mode: ");
+    scanf("%d", &mode);
+    switch(mode) 
+{
+        case 1: printf("Camera set to PHOTO mode.\n"); break;
+        case 2: printf("Camera set to VIDEO mode.\n"); break;
+        case 3: printf("Camera set to PANORAMA mode.\n"); break;
+        case 4: printf("Camera set to PORTRAIT mode.\n"); break;
+        default: printf("Invalid mode.\n");
+    }
+    return 0;
+}
