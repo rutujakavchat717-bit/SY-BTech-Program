@@ -1,0 +1,17 @@
+#include <stdio.h>
+float avgBP(float bp[], int n) 
+{
+    float sum = 0;
+    for(int i = 0; i < n; i++)
+        sum += bp[i];
+    return sum / n;
+}
+int main()
+{
+    float bp[5];
+    printf("Enter 5 blood pressure readings: ");
+    for(int i = 0; i < 5; i++)
+        scanf("%f", &bp[i]);
+    printf("Average Blood Pressure = %.2f\n", avgBP(bp, 5));
+    return 0;
+}
