@@ -1,0 +1,17 @@
+#include <stdio.h>
+float avgBatteryVoltage(float v[], int n) 
+{
+    float sum = 0;
+    for(int i = 0; i < n; i++)
+        sum += v[i];
+    return sum / n;
+}
+int main() 
+{
+    float v[5];
+    printf("Enter voltage of 5 cells: ");
+    for(int i = 0; i < 5; i++)
+        scanf("%f", &v[i]);
+    printf("Average Battery Voltage = %.2f V\n", avgBatteryVoltage(v, 5));
+    return 0;
+}
