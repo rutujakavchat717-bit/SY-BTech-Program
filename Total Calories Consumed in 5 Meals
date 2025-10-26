@@ -1,0 +1,17 @@
+#include <stdio.h>
+float totalCalories(float c[], int n) 
+{
+    float sum = 0;
+    for(int i = 0; i < n; i++)
+        sum += c[i];
+    return sum;
+}
+int main() 
+{
+    float c[5];
+    printf("Enter calories for 5 meals: ");
+    for(int i = 0; i < 5; i++)
+        scanf("%f", &c[i]);
+    printf("Total Calories = %.2f kcal\n", totalCalories(c, 5));
+    return 0;
+}
