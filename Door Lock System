@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+    int mode;
+    printf("Door Lock Menu:\n1. Lock\n2. Unlock\n3. Alarm\nEnter choice: ");
+    scanf("%d", &mode);
+    switch(mode) 
+{
+        case 1: printf("Door is LOCKED.\n"); break;
+        case 2: printf("Door is UNLOCKED.\n"); break;
+        case 3: printf("ALARM activated!\n"); break;
+        default: printf("Invalid option.\n");
+    }
+    return 0;
+}
