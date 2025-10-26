@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main() 
+{
+    int gear;
+    printf("Enter Gear Number:\n0. Neutral\n1. First\n2. Second\n3. Third\n4. Fourth\n5. Fifth\nEnter gear: ");
+    scanf("%d", &gear);
+    switch(gear) 
+{
+        case 0: printf("Vehicle is in NEUTRAL.\n"); break;
+        case 1: printf("Gear shifted to FIRST.\n"); break;
+        case 2: printf("Gear shifted to SECOND.\n"); break;
+        case 3: printf("Gear shifted to THIRD.\n"); break;
+        case 4: printf("Gear shifted to FOURTH.\n"); break;
+        case 5: printf("Gear shifted to FIFTH.\n"); break;
+        default: printf("Invalid gear.\n");
+    }
+    return 0;
+}
