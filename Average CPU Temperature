@@ -1,0 +1,17 @@
+#include <stdio.h>
+float avgTemp(float t[], int n) 
+{
+    float total = 0;
+    for(int i = 0; i < n; i++)
+        total += t[i];
+    return total / n;
+}
+int main() 
+{
+    float t[5];
+    printf("Enter CPU temperature readings: ");
+    for(int i = 0; i < 5; i++)
+        scanf("%f", &t[i]);
+    printf("Average CPU Temperature = %.2f°C\n", avgTemp(t, 5));
+    return 0;
+}
