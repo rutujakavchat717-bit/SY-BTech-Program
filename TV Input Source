@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main() 
+{
+    int input;
+    printf("Select TV Input Source:\n1. HDMI1\n2. HDMI2\n3. USB\n4. AV\nEnter input: ");
+    scanf("%d", &input);
+    switch(input) 
+{
+        case 1: printf("Switched to HDMI1.\n"); break;
+        case 2: printf("Switched to HDMI2.\n"); break;
+        case 3: printf("Switched to USB.\n"); break;
+        case 4: printf("Switched to AV.\n"); break;
+        default: printf("Invalid input.\n");
+    }
+    return 0;
+}
