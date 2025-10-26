@@ -1,0 +1,17 @@
+#include <stdio.h>
+float avgWeight(float w[], int n) 
+{
+    float total = 0;
+    for(int i = 0; i < n; i++)
+        total += w[i];
+    return total / n;
+}
+int main() 
+{
+    float w[5];
+    printf("Enter weight of 5 boxes (in kg): ");
+    for(int i = 0; i < 5; i++)
+        scanf("%f", &w[i]);
+    printf("Average Weight = %.2f kg\n", avgWeight(w, 5));
+    return 0;
+}
