@@ -1,0 +1,17 @@
+#include <stdio.h>
+float totalDistance(float d[], int n) 
+{
+    float total = 0;
+    for(int i = 0; i < n; i++)
+        total += d[i];
+    return total;
+}
+int main() 
+{
+    float d[5];
+    printf("Enter distance covered by 5 buses (in km): ");
+    for(int i = 0; i < 5; i++)
+        scanf("%f", &d[i]);
+    printf("Total Distance = %.2f km\n", totalDistance(d, 5));
+    return 0;
+}
