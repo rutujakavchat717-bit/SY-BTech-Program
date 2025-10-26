@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main() 
+{
+    int program;
+    printf("Washing Machine Programs:\n1. Quick Wash\n2. Normal\n3. Heavy\n4. Rinse Only\nEnter choice: ");
+    scanf("%d", &program);
+    switch(program) 
+{
+        case 1: printf("Quick Wash selected.\n"); break;
+        case 2: printf("Normal Wash selected.\n"); break;
+        case 3: printf("Heavy Wash selected.\n"); break;
+        case 4: printf("Rinse Only mode selected.\n"); break;
+        default: printf("Invalid selection.\n");
+    }
+    return 0;
+}
