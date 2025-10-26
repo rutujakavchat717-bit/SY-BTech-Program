@@ -1,0 +1,17 @@
+#include <stdio.h>
+float averageHeight(float h[], int n) 
+{
+    float sum = 0;
+    for(int i = 0; i < n; i++)
+        sum += h[i];
+    return sum / n;
+}
+int main() 
+{
+    float h[5];
+    printf("Enter height of 5 students (in cm): ");
+    for(int i = 0; i < 5; i++)
+        scanf("%f", &h[i]);
+    printf("Average Height = %.2f cm\n", averageHeight(h, 5));
+    return 0;
+}
