@@ -1,0 +1,17 @@
+#include <stdio.h>
+float totalPower(float power[], int n) 
+{
+    float total = 0;
+    for(int i = 0; i < n; i++)
+        total += power[i];
+    return total;
+}
+int main() 
+{
+    float power[5];
+    printf("Enter power used by 5 devices (in watts): ");
+    for(int i = 0; i < 5; i++)
+        scanf("%f", &power[i]);
+    printf("Total Power Consumption = %.2f W\n", totalPower(power, 5));
+    return 0;
+}
