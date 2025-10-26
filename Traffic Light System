@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+    int signal;
+    printf("Traffic Light:\n1. Red\n2. Yellow\n3. Green\nEnter signal: ");
+    scanf("%d", &signal);
+    switch(signal) 
+{
+        case 1: printf("Stop! The light is RED.\n"); break;
+        case 2: printf("Get Ready! The light is YELLOW.\n"); break;
+        case 3: printf("Go! The light is GREEN.\n"); break;
+        default: printf("Invalid signal.\n");
+    }
+    return 0;
+}
