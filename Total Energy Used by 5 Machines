@@ -1,0 +1,17 @@
+#include <stdio.h>
+float totalEnergy(float e[], int n) 
+{
+    float total = 0;
+    for(int i = 0; i < n; i++)
+        total += e[i];
+    return total;
+}
+int main() 
+{
+    float e[5];
+    printf("Enter energy used by 5 machines (in kWh): ");
+    for(int i = 0; i < 5; i++)
+        scanf("%f", &e[i]);
+    printf("Total Energy Used = %.2f kWh\n", totalEnergy(e, 5));
+    return 0;
+}
