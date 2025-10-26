@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main() 
+{
+    int mode;
+    printf("AC Modes:\n1. Cool\n2. Heat\n3. Fan\n4. Dry\nEnter your mode: ");
+    scanf("%d", &mode);
+    switch(mode) 
+{
+        case 1: printf("AC set to COOL mode.\n"); break;
+        case 2: printf("AC set to HEAT mode.\n"); break;
+        case 3: printf("AC set to FAN mode.\n"); break;
+        case 4: printf("AC set to DRY mode.\n"); break;
+        default: printf("Invalid mode.\n");
+    }
+    return 0;
+}
