@@ -1,0 +1,17 @@
+#include <stdio.h>
+float totalTime(float time[], int n) 
+{
+    float sum = 0;
+    for(int i = 0; i < n; i++)
+        sum += time[i];
+    return sum;
+}
+int main() 
+{
+    float time[5];
+    printf("Enter time taken for 5 tasks (in hours): ");
+    for(int i = 0; i < 5; i++)
+        scanf("%f", &time[i]);
+    printf("Total Time = %.2f hours\n", totalTime(time, 5));
+    return 0;
+}
