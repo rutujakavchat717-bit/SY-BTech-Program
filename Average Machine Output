@@ -1,0 +1,17 @@
+#include <stdio.h>
+float avgOutput(float o[], int n) 
+{
+    float sum = 0;
+    for(int i = 0; i < n; i++)
+        sum += o[i];
+    return sum / n;
+}
+int main() 
+{
+    float o[5];
+    printf("Enter output of 5 machines (in units): ");
+    for(int i = 0; i < 5; i++)
+        scanf("%f", &o[i]);
+    printf("Average Machine Output = %.2f units\n", avgOutput(o, 5));
+    return 0;
+}
