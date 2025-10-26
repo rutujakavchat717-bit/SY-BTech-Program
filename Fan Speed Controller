@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+    int speed;
+    printf("Fan Speed Modes:\n1. Low\n2. Medium\n3. High\nEnter your choice: ");
+    scanf("%d", &speed);
+    switch(speed) 
+{
+        case 1: printf("Fan running on LOW speed.\n"); break;
+        case 2: printf("Fan running on MEDIUM speed.\n"); break;
+        case 3: printf("Fan running on HIGH speed.\n"); break;
+        default: printf("Invalid speed.\n");
+    }
+    return 0;
+}
