@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+    int mode;
+    printf("Light Intensity Modes:\n1. Dim\n2. Normal\n3. Bright\nEnter your mode: ");
+    scanf("%d", &mode);
+    switch(mode) 
+{
+        case 1: printf("Light set to DIM.\n"); break;
+        case 2: printf("Light set to NORMAL.\n"); break;
+        case 3: printf("Light set to BRIGHT.\n"); break;
+        default: printf("Invalid mode.\n");
+    }
+    return 0;
+}
