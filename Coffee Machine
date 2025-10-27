@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+int main() 
+{
+    char type[10];
+    printf("Enter Type (ESPRESSO / LATTE): ");
+    scanf("%s", type);
+    if (strcmp(type, "ESPRESSO") == 0)
+        printf("Preparing Espresso\n");
+    else if (strcmp(type, "LATTE") == 0)
+        printf("Preparing Latte\n");
+    else
+        printf("Invalid Type\n");
+    return 0;
+}
