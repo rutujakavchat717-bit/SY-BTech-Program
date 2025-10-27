@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+    int setting;
+    printf("Sprinkler Settings:\n1. Morning\n2. Evening\n3. Manual\nEnter setting: ");
+    scanf("%d", &setting);
+    switch(setting) 
+{
+        case 1: printf("Sprinklers scheduled for MORNING.\n"); break;
+        case 2: printf("Sprinklers scheduled for EVENING.\n"); break;
+        case 3: printf("Sprinklers set to MANUAL control.\n"); break;
+        default: printf("Invalid setting.\n");
+    }
+    return 0;
+}
