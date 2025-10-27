@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+    int mode;
+    printf("Water Pump Control:\n1. On\n2. Off\n3. Auto\nEnter mode: ");
+    scanf("%d", &mode);
+    switch(mode) 
+{
+        case 1: printf("Pump turned ON.\n"); break;
+        case 2: printf("Pump turned OFF.\n"); break;
+        case 3: printf("Pump set to AUTO mode.\n"); break;
+        default: printf("Invalid mode.\n");
+}
+    return 0;
+}
