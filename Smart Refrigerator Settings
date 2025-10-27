@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+    int setting;
+    printf("Refrigerator Settings:\n1. Cooling\n2. Freezing\n3. Power Saver\nEnter setting: ");
+    scanf("%d", &setting);
+    switch(setting) 
+{
+        case 1: printf("Cooling mode ON.\n"); break;
+        case 2: printf("Freezing mode ON.\n"); break;
+        case 3: printf("Power Saver mode ON.\n"); break;
+        default: printf("Invalid setting.\n");
+    }
+    return 0;
+}
