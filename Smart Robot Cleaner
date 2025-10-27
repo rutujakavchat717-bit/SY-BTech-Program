@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+    int mode;
+    printf("Robot Cleaner Modes:\n1. Auto Clean\n2. Edge Clean\n3. Return to Dock\nEnter mode: ");
+    scanf("%d", &mode);
+    switch(mode) 
+{
+        case 1: printf("Auto cleaning started.\n"); break;
+        case 2: printf("Edge cleaning started.\n"); break;
+        case 3: printf("Returning to dock.\n"); break;
+        default: printf("Invalid mode.\n");
+}
+    return 0;
+}
