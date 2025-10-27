@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+    int option;
+    printf("Door Lock Options:\n1. Lock\n2. Unlock\n3. Auto-Lock\nEnter option: ");
+    scanf("%d", &option);
+    switch(option) 
+{
+        case 1: printf("Door locked.\n"); break;
+        case 2: printf("Door unlocked.\n"); break;
+        case 3: printf("Auto-lock enabled.\n"); break;
+        default: printf("Invalid input.\n");
+}
+    return 0;
+}
