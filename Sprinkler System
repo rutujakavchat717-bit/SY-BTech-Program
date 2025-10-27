@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+int main() 
+{
+    char command[10];
+    printf("Enter Command (SPRAY / STOP): ");
+    scanf("%s", command);
+    if (strcmp(command, "SPRAY") == 0)
+        printf("Sprinkler System Activated\n");
+    else if (strcmp(command, "STOP") == 0)
+        printf("Sprinkler System Deactivated\n");
+    else
+        printf("Invalid Command\n");
+    return 0;
+}
