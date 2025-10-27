@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+int main() 
+{
+    char grip[10];
+    printf("Enter Command (GRIP / RELEASE): ");
+    scanf("%s", grip);
+    if (strcmp(grip, "GRIP") == 0)
+        printf("Object Gripped\n");
+    else if (strcmp(grip, "RELEASE") == 0)
+        printf("Object Released\n");
+    else
+        printf("Invalid Command\n");
+    return 0;
+}
