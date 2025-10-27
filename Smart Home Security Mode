@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+    int mode;
+    printf("Home Security Modes:\n1. Away\n2. Stay\n3. Disarmed\nEnter mode: ");
+    scanf("%d", &mode);
+    switch(mode) 
+{
+        case 1: printf("Security system set to AWAY mode.\n"); break;
+        case 2: printf("Security system set to STAY mode.\n"); break;
+        case 3: printf("Security system DISARMED.\n"); break;
+        default: printf("Invalid mode.\n");
+}
+    return 0;
+}
