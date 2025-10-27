@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+    int action;
+    printf("Curtain Control:\n1. Open\n2. Close\n3. Stop\nEnter action: ");
+    scanf("%d", &action);
+    switch(action) 
+{
+        case 1: printf("Curtains opening.\n"); break;
+        case 2: printf("Curtains closing.\n"); break;
+        case 3: printf("Curtain movement stopped.\n"); break;
+        default: printf("Invalid action.\n");
+}
+    return 0;
+}
