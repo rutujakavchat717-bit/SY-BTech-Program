@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char command[10];
+    printf("Enter Command (LOCK / UNLOCK): ");
+    scanf("%s", command);
+    if (strcmp(command, "LOCK") == 0)
+        printf("Smart Lock Engaged\n");
+    else if (strcmp(command, "UNLOCK") == 0)
+        printf("Smart Lock Released\n");
+    else
+        printf("Invalid Command\n");
+    return 0;
+}
