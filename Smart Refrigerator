@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+int main() 
+{
+    char mode[10];
+    printf("Enter Mode (COOL / DEFROST): ");
+    scanf("%s", mode);
+    if (strcmp(mode, "COOL") == 0)
+        printf("Refrigerator Cooling Mode\n");
+    else if (strcmp(mode, "DEFROST") == 0)
+        printf("Refrigerator Defrost Mode\n");
+    else
+        printf("Invalid Mode\n");
+    return 0;
+}
