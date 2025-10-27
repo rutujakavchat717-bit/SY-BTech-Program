@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main() 
+{
+    int direction;
+    printf("Robot Navigation:\n1. Forward\n2. Backward\n3. Turn Left\n4. Turn Right\nEnter direction: ");
+    scanf("%d", &direction);
+    switch(direction) 
+{
+        case 1: printf("Robot moving FORWARD.\n"); break;
+        case 2: printf("Robot moving BACKWARD.\n"); break;
+        case 3: printf("Robot turning LEFT.\n"); break;
+        case 4: printf("Robot turning RIGHT.\n"); break;
+        default: printf("Invalid direction.\n");
+}
+    return 0;
+}
