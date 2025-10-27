@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+    int mode;
+    printf("Smart TV Modes:\n1. HDMI\n2. USB\n3. Wi-Fi\nEnter mode: ");
+    scanf("%d", &mode);
+    switch(mode) 
+{
+        case 1: printf("Switched to HDMI mode.\n"); break;
+        case 2: printf("Switched to USB mode.\n"); break;
+        case 3: printf("Connected via Wi-Fi.\n"); break;
+        default: printf("Invalid input.\n");
+}
+    return 0;
+}
