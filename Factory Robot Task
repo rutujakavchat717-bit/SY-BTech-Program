@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+    int task;
+    printf("Robot Task Selection:\n1. Welding\n2. Painting\n3. Assembly\nEnter task: ");
+    scanf("%d", &task);
+    switch(task) 
+{
+        case 1: printf("Robot performing Welding task.\n"); break;
+        case 2: printf("Robot performing Painting task.\n"); break;
+        case 3: printf("Robot performing Assembly task.\n"); break;
+        default: printf("Invalid task.\n");
+}
+    return 0;
+}
