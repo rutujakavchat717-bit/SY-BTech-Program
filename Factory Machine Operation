@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+    int mode;
+    printf("Factory Machine Operation:\n1. Start\n2. Stop\n3. Maintenance\nEnter mode: ");
+    scanf("%d", &mode);
+    switch(mode) 
+{
+        case 1: printf("Machine started successfully.\n"); break;
+        case 2: printf("Machine stopped.\n"); break;
+        case 3: printf("Machine in maintenance mode.\n"); break;
+        default: printf("Invalid mode.\n");
+    }
+    return 0;
+}
