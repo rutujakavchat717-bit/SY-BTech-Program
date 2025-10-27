@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+    int mode;
+    printf("Temperature Control:\n1. Cooling\n2. Heating\n3. Off\nEnter mode: ");
+    scanf("%d", &mode);
+    switch(mode) 
+{
+        case 1: printf("Cooling mode activated.\n"); break;
+        case 2: printf("Heating mode activated.\n"); break;
+        case 3: printf("System turned off.\n"); break;
+        default: printf("Invalid choice.\n");
+    }
+    return 0;
+}
