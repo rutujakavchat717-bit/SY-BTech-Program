@@ -1,0 +1,16 @@
+Air Conditioner Control
+#include <stdio.h>
+int main() 
+{
+    int mode;
+    printf("Air Conditioner Modes:\n1. Cool\n2. Heat\n3. Fan\nEnter mode: ");
+    scanf("%d", &mode);
+    switch(mode) 
+{
+        case 1: printf("Cooling mode ON.\n"); break;
+        case 2: printf("Heating mode ON.\n"); break;
+        case 3: printf("Fan mode ON.\n"); break;
+        default: printf("Invalid mode.\n");
+}
+    return 0;
+}
