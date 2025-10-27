@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+int main() 
+{
+    char state[10];
+    printf("Enter State (OPEN / CLOSE): ");
+    scanf("%s", state);
+    if (strcmp(state, "OPEN") == 0)
+        printf("Door is Open\n");
+    else if (strcmp(state, "CLOSE") == 0)
+        printf("Door is Closed\n");
+    else
+        printf("Invalid State\n");
+    return 0;
+}
