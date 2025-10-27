@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+int main() 
+{
+    char mode[10];
+    printf("Enter Mode (FAST / SLOW): ");
+    scanf("%s", mode);
+    if (strcmp(mode, "FAST") == 0)
+        printf("Washing Machine Spinning Fast\n");
+    else if (strcmp(mode, "SLOW") == 0)
+        printf("Washing Machine Spinning Slow\n");
+    else
+        printf("Invalid Mode\n");
+    return 0;
+}
