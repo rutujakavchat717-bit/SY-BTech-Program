@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+int main() 
+{
+    char dir[10];
+    printf("Enter Direction (FORWARD / BACKWARD): ");
+    scanf("%s", dir);
+    if (strcmp(dir, "FORWARD") == 0)
+        printf("Robot Moving Forward\n");
+    else if (strcmp(dir, "BACKWARD") == 0)
+        printf("Robot Moving Backward\n");
+    else
+        printf("Invalid Direction\n");
+    return 0;
+}
