@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+    int mode;
+    printf("Smart Thermostat Modes:\n1. Energy Saver\n2. Comfort\n3. Sleep\nEnter mode: ");
+    scanf("%d", &mode);
+    switch(mode) 
+{
+        case 1: printf("Energy Saver mode ON.\n"); break;
+        case 2: printf("Comfort mode ON.\n"); break;
+        case 3: printf("Sleep mode ON.\n"); break;
+        default: printf("Invalid mode.\n");
+    }
+    return 0;
+}
