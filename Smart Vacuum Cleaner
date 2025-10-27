@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+    int mode;
+    printf("Vacuum Cleaner Modes:\n1. Auto\n2. Spot Clean\n3. Return to Dock\nEnter mode: ");
+    scanf("%d", &mode);
+    switch(mode) 
+{
+        case 1: printf("Auto cleaning mode started.\n"); break;
+        case 2: printf("Spot cleaning in progress.\n"); break;
+        case 3: printf("Returning to dock.\n"); break;
+        default: printf("Invalid mode.\n");
+}
+    return 0;
+}
