@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+    int option;
+    printf("Drone Control:\n1. Take Off\n2. Land\n3. Hover\nEnter option: ");
+    scanf("%d", &option);
+    switch(option) 
+{
+        case 1: printf("Drone taking off.\n"); break;
+        case 2: printf("Drone landing.\n"); break;
+        case 3: printf("Drone hovering.\n"); break;
+        default: printf("Invalid option.\n");
+    }
+    return 0;
+}
