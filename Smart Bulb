@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+int main() 
+{
+    char mode[10];
+    printf("Enter Mode (BRIGHT / DIM): ");
+    scanf("%s", mode);
+    if (strcmp(mode, "BRIGHT") == 0)
+        printf("Light set to BRIGHT mode\n");
+    else if (strcmp(mode, "DIM") == 0)
+        printf("Light set to DIM mode\n");
+    else
+        printf("Invalid Mode\n");
+    return 0;
+}
