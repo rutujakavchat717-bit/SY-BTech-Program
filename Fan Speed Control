@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+int main() 
+{
+    char speed[10];
+    printf("Enter Speed (LOW / HIGH): ");
+    scanf("%s", speed);
+    if (strcmp(speed, "LOW") == 0)
+        printf("Fan Speed set to LOW\n");
+    else if (strcmp(speed, "HIGH") == 0)
+        printf("Fan Speed set to HIGH\n");
+    else
+        printf("Invalid Speed\n");
+    return 0;
+}
