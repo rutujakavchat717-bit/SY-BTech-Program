@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+int main() 
+{
+    char state[10];
+    printf("Enter Command (DAY / NIGHT): ");
+    scanf("%s", state);
+    if (strcmp(state, "DAY") == 0)
+        printf("Street Lights OFF during Day\n");
+    else if (strcmp(state, "NIGHT") == 0)
+        printf("Street Lights ON during Night\n");
+    else
+        printf("Invalid Command\n");
+    return 0;
+}
