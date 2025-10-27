@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+int main() 
+{
+    char state[10];
+    printf("Enter Command (HEAT / OFF): ");
+    scanf("%s", state);
+    if (strcmp(state, "HEAT") == 0)
+        printf("Water Heater ON - Heating Water\n");
+    else if (strcmp(state, "OFF") == 0)
+        printf("Water Heater Turned OFF\n");
+    else
+        printf("Invalid Command\n");
+    return 0;
+}
