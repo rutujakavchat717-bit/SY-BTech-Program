@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+int main() 
+{
+    char cmd[10];
+    printf("Enter Command (PHOTO / VIDEO): ");
+    scanf("%s", cmd);
+    if (strcmp(cmd, "PHOTO") == 0)
+        printf("Drone Capturing Photo\n");
+    else if (strcmp(cmd, "VIDEO") == 0)
+        printf("Drone Recording Video\n");
+    else
+        printf("Invalid Command\n");
+    return 0;
+}
