@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+int main() 
+{
+    char voice[10];
+    printf("Enter Command (SPEAK / SILENT): ");
+    scanf("%s", voice);
+    if (strcmp(voice, "SPEAK") == 0)
+        printf("Robot Speaking Mode Enabled\n");
+    else if (strcmp(voice, "SILENT") == 0)
+        printf("Robot Silent Mode Activated\n");
+    else
+        printf("Invalid Command\n");
+    return 0;
+}
