@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+    int speed;
+    printf("Robotic Arm Speed:\n1. Slow\n2. Normal\n3. Fast\nEnter speed: ");
+    scanf("%d", &speed);
+    switch(speed) 
+{
+        case 1: printf("Speed set to SLOW.\n"); break;
+        case 2: printf("Speed set to NORMAL.\n"); break;
+        case 3: printf("Speed set to FAST.\n"); break;
+        default: printf("Invalid speed.\n");
+}
+    return 0;
+}
