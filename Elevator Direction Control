@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+    int direction;
+    printf("Elevator Direction:\n1. Up\n2. Down\n3. Stop\nEnter direction: ");
+    scanf("%d", &direction);
+    switch(direction) 
+{
+        case 1: printf("Elevator moving UP.\n"); break;
+        case 2: printf("Elevator moving DOWN.\n"); break;
+        case 3: printf("Elevator STOPPED.\n"); break;
+        default: printf("Invalid input.\n");
+    }
+    return 0;
+}
