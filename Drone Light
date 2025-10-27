@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+int main() 
+{
+    char cmd[10];
+    printf("Enter Command (ON / OFF): ");
+    scanf("%s", cmd);
+    if (strcmp(cmd, "ON") == 0)
+        printf("Drone Light ON\n");
+    else if (strcmp(cmd, "OFF") == 0)
+        printf("Drone Light OFF\n");
+    else
+        printf("Invalid Command\n");
+    return 0;
+}
