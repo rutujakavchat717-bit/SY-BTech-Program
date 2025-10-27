@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+int main() 
+{
+    char mode[10];
+    printf("Enter Command (ARM / DISARM): ");
+    scanf("%s", mode);
+    if (strcmp(mode, "ARM") == 0)
+        printf("Security System Armed\n");
+    else if (strcmp(mode, "DISARM") == 0)
+        printf("Security System Disarmed\n");
+    else
+        printf("Invalid Command\n");
+    return 0;
+}
