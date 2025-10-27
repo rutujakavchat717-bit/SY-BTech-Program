@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+int main() 
+{
+    char command[10];
+    printf("Enter Command (OPEN / CLOSE): ");
+    scanf("%s", command);
+    if (strcmp(command, "OPEN") == 0)
+        printf("Curtains Opening\n");
+    else if (strcmp(command, "CLOSE") == 0)
+        printf("Curtains Closing\n");
+    else
+        printf("Invalid Command\n");
+    return 0;
+}
