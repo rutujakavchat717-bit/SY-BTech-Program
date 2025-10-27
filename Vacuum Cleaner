@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+int main() 
+{
+    char command[10];
+    printf("Enter Command (START / PAUSE): ");
+    scanf("%s", command);
+    if (strcmp(command, "START") == 0)
+        printf("Vacuum Cleaner Started\n");
+    else if (strcmp(command, "PAUSE") == 0)
+        printf("Vacuum Cleaner Paused\n");
+    else
+        printf("Invalid Command\n");
+    return 0;
+}
