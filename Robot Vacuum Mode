@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+int main() 
+{
+    char mode[10];
+    printf("Enter Mode (AUTO / MANUAL): ");
+    scanf("%s", mode);
+    if (strcmp(mode, "AUTO") == 0)
+        printf("Vacuum Running in Auto Mode\n");
+    else if (strcmp(mode, "MANUAL") == 0)
+        printf("Vacuum Running in Manual Mode\n");
+    else
+        printf("Invalid Mode\n");
+    return 0;
+}
