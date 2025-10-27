@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+int main() 
+{
+    char command[10];
+    printf("Enter Command (CHECK / RESET): ");
+    scanf("%s", command);
+    if (strcmp(command, "CHECK") == 0)
+        printf("All Sensors Checked - OK\n");
+    else if (strcmp(command, "RESET") == 0)
+        printf("Sensors Reset Successfully\n");
+    else
+        printf("Invalid Command\n");
+    return 0;
+}
