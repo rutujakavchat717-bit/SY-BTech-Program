@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+int main() 
+{
+    char command[10];
+    printf("Enter Command (PRINT / CANCEL): ");
+    scanf("%s", command);
+    if (strcmp(command, "PRINT") == 0)
+        printf("Printing Document...\n");
+    else if (strcmp(command, "CANCEL") == 0)
+        printf("Printing Cancelled\n");
+    else
+        printf("Invalid Command\n");
+    return 0;
+}
