@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+int main() 
+{
+    char command[10];
+    printf("Enter Command (UP / DOWN): ");
+    scanf("%s", command);
+    if (strcmp(command, "UP") == 0)
+        printf("Elevator Moving UP\n");
+    else if (strcmp(command, "DOWN") == 0)
+        printf("Elevator Moving DOWN\n");
+    else
+        printf("Invalid Command\n");
+    return 0;
+}
