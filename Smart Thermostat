@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+int main() 
+{
+    char setting[10];
+    printf("Enter Setting (HEAT / COOL): ");
+    scanf("%s", setting);
+    if (strcmp(setting, "HEAT") == 0)
+        printf("Thermostat in Heating Mode\n");
+    else if (strcmp(setting, "COOL") == 0)
+        printf("Thermostat in Cooling Mode\n");
+    else
+        printf("Invalid Setting\n");
+    return 0;
+}
