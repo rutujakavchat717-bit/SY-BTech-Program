@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+    int level;
+    printf("Air Purifier Levels:\n1. Low\n2. Medium\n3. High\nEnter level: ");
+    scanf("%d", &level);
+    switch(level) 
+{
+        case 1: printf("Low purification mode.\n"); break;
+        case 2: printf("Medium purification mode.\n"); break;
+        case 3: printf("High purification mode.\n"); break;
+        default: printf("Invalid level.\n");
+}
+    return 0;
+}
