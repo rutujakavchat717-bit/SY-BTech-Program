@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+    int mode;
+    printf("Robot Communication Mode:\n1. Wi-Fi\n2. Bluetooth\n3. Offline\nEnter mode: ");
+    scanf("%d", &mode);
+    switch(mode) 
+{
+        case 1: printf("Robot connected via Wi-Fi.\n"); break;
+        case 2: printf("Robot connected via Bluetooth.\n"); break;
+        case 3: printf("Robot operating Offline.\n"); break;
+        default: printf("Invalid mode.\n");
+}
+    return 0;
+}
