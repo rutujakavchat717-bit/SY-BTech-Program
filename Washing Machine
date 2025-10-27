@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+int main() 
+{
+    char command[10];
+    printf("Enter Command (WASH / RINSE): ");
+    scanf("%s", command);
+    if (strcmp(command, "WASH") == 0)
+        printf("Washing Cycle Started\n");
+    else if (strcmp(command, "RINSE") == 0)
+        printf("Rinsing Cycle Started\n");
+    else
+        printf("Invalid Command\n");
+    return 0;
+}
