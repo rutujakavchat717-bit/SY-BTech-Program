@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+int main() 
+{
+    char command[10];
+    printf("Enter Command (COOL / HEAT): ");
+    scanf("%s", command);
+    if (strcmp(command, "COOL") == 0)
+        printf("Air Conditioner in Cooling Mode\n");
+    else if (strcmp(command, "HEAT") == 0)
+        printf("Air Conditioner in Heating Mode\n");
+    else
+        printf("Invalid Command\n");
+    return 0;
+}
