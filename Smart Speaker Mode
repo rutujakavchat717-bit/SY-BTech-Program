@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+    int mode;
+    printf("Smart Speaker Modes:\n1. Music\n2. Alarm\n3. Bluetooth\nEnter mode: ");
+    scanf("%d", &mode);
+    switch(mode) 
+{
+        case 1: printf("Playing music.\n"); break;
+        case 2: printf("Alarm activated.\n"); break;
+        case 3: printf("Bluetooth mode ON.\n"); break;
+        default: printf("Invalid mode.\n");
+}
+    return 0;
+}
