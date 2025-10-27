@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+    int choice;
+    printf("Coffee Machine Menu:\n1. Espresso\n2. Cappuccino\n3. Latte\nEnter choice: ");
+    scanf("%d", &choice);
+    switch(choice) 
+{
+        case 1: printf("Preparing Espresso...\n"); break;
+        case 2: printf("Preparing Cappuccino...\n"); break;
+        case 3: printf("Preparing Latte...\n"); break;
+        default: printf("Invalid choice.\n");
+}
+    return 0;
+}
