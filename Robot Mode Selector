@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+int main() 
+{
+    char mode[10];
+    printf("Enter Mode (IDLE / ACTIVE): ");
+    scanf("%s", mode);
+    if (strcmp(mode, "IDLE") == 0)
+        printf("Robot in Idle Mode\n");
+    else if (strcmp(mode, "ACTIVE") == 0)
+        printf("Robot in Active Mode\n");
+    else
+        printf("Invalid Mode\n");
+    return 0;
+}
