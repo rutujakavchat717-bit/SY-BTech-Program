@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+    int mode;
+    printf("Drone Camera Modes:\n1. Photo\n2. Video\n3. Panorama\nEnter mode: ");
+    scanf("%d", &mode);
+    switch(mode) 
+{
+        case 1: printf("Photo mode activated.\n"); break;
+        case 2: printf("Video mode activated.\n"); break;
+        case 3: printf("Panorama mode activated.\n"); break;
+        default: printf("Invalid mode.\n");
+}
+    return 0;
+}
