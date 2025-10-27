@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+    int program;
+    printf("Washing Machine Programs:\n1. Quick Wash\n2. Normal Wash\n3. Heavy Wash\nEnter program: ");
+    scanf("%d", &program);
+    switch(program) 
+{
+        case 1: printf("Quick Wash selected.\n"); break;
+        case 2: printf("Normal Wash selected.\n"); break;
+        case 3: printf("Heavy Wash selected.\n"); break;
+        default: printf("Invalid program.\n");
+    }
+    return 0;
+}
