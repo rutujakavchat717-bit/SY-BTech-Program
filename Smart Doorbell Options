@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+    int option;
+    printf("Smart Doorbell Options:\n1. Ring Bell\n2. Show Camera\n3. Talk\nEnter option: ");
+    scanf("%d", &option);
+    switch(option) 
+{
+        case 1: printf("Bell is ringing!\n"); break;
+        case 2: printf("Showing camera view.\n"); break;
+        case 3: printf("Talking mode activated.\n"); break;
+        default: printf("Invalid option.\n");
+    }
+    return 0;
+}
