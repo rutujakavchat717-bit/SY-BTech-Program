@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+int main() 
+{
+    char state[10];
+    printf("Enter Mode (AUTO / MANUAL): ");
+    scanf("%s", state);
+    if (strcmp(state, "AUTO") == 0)
+        printf("Air Purifier in Auto Mode\n");
+    else if (strcmp(state, "MANUAL") == 0)
+        printf("Air Purifier in Manual Mode\n");
+    else
+        printf("Invalid Mode\n");
+    return 0;
+}
