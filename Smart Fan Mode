@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+    int mode;
+    printf("Smart Fan Modes:\n1. Auto\n2. Manual\n3. Turbo\nEnter mode: ");
+    scanf("%d", &mode);
+    switch(mode) 
+{
+        case 1: printf("Fan set to AUTO mode.\n"); break;
+        case 2: printf("Fan set to MANUAL mode.\n"); break;
+        case 3: printf("Fan set to TURBO mode.\n"); break;
+        default: printf("Invalid mode.\n");
+    }
+    return 0;
+}
