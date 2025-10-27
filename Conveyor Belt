@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+int main() 
+{
+    char direction[10];
+    printf("Enter Direction (FORWARD / REVERSE): ");
+    scanf("%s", direction);
+    if (strcmp(direction, "FORWARD") == 0)
+        printf("Conveyor Moving Forward\n");
+    else if (strcmp(direction, "REVERSE") == 0)
+        printf("Conveyor Moving in Reverse\n");
+    else
+        printf("Invalid Direction\n");
+    return 0;
+}
