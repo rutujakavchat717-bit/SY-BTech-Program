@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+int main() 
+{
+    char mode[10];
+    printf("Enter Mode (BAKE / GRILL): ");
+    scanf("%s", mode);
+    if (strcmp(mode, "BAKE") == 0)
+        printf("Oven Set to Baking Mode\n");
+    else if (strcmp(mode, "GRILL") == 0)
+        printf("Oven Set to Grilling Mode\n");
+    else
+        printf("Invalid Mode\n");
+    return 0;
+}
