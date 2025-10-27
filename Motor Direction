@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+int main() 
+{
+    char dir[10];
+    printf("Enter Direction (LEFT / RIGHT): ");
+    scanf("%s", dir);
+    if (strcmp(dir, "LEFT") == 0)
+        printf("Motor turning LEFT\n");
+    else if (strcmp(dir, "RIGHT") == 0)
+        printf("Motor turning RIGHT\n");
+    else
+        printf("Invalid Direction\n");
+    return 0;
+}
