@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+    int command;
+    printf("Robot Gripper Control:\n1. Open\n2. Close\n3. Hold\nEnter command: ");
+    scanf("%d", &command);
+    switch(command) 
+{
+        case 1: printf("Gripper OPENED.\n"); break;
+        case 2: printf("Gripper CLOSED.\n"); break;
+        case 3: printf("Gripper HOLDING object.\n"); break;
+        default: printf("Invalid command.\n");
+    }
+    return 0;
+}
