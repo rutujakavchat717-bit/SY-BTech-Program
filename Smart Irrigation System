@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+    int mode;
+    printf("Irrigation System Modes:\n1. Automatic\n2. Manual\n3. Rain Delay\nEnter mode: ");
+    scanf("%d", &mode);
+    switch(mode) 
+{
+        case 1: printf("Automatic irrigation ON.\n"); break;
+        case 2: printf("Manual irrigation ON.\n"); break;
+        case 3: printf("Rain Delay activated.\n"); break;
+        default: printf("Invalid mode.\n");
+}
+    return 0;
+}
