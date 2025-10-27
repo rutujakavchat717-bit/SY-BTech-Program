@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+int main() 
+{
+    char color[10];
+    printf("Enter Mode (WHITE / COLOR): ");
+    scanf("%s", color);
+    if (strcmp(color, "WHITE") == 0)
+        printf("Light set to White Mode\n");
+    else if (strcmp(color, "COLOR") == 0)
+        printf("Light set to Color Mode\n");
+    else
+        printf("Invalid Mode\n");
+    return 0;
+}
