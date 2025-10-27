@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+    int dir;
+    printf("Camera Rotation:\n1. Left\n2. Right\n3. Center\nEnter direction: ");
+    scanf("%d", &dir);
+    switch(dir) 
+{
+        case 1: printf("Camera rotating LEFT.\n"); break;
+        case 2: printf("Camera rotating RIGHT.\n"); break;
+        case 3: printf("Camera centered.\n"); break;
+        default: printf("Invalid direction.\n");
+    }
+    return 0;
+}
