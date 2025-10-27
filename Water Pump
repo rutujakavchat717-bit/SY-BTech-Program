@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+int main() 
+{
+    char state[10];
+    printf("Enter Command (START / STOP): ");
+    scanf("%s", state);
+    if (strcmp(state, "START") == 0)
+        printf("Water Pump Started\n");
+    else if (strcmp(state, "STOP") == 0)
+        printf("Water Pump Stopped\n");
+    else
+        printf("Invalid Command\n");
+    return 0;
+}
