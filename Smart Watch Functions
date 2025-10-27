@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+    int func;
+    printf("Smart Watch Functions:\n1. Time Display\n2. Heart Rate\n3. Step Count\nEnter function: ");
+    scanf("%d", &func);
+    switch(func) 
+{
+        case 1: printf("Displaying current time.\n"); break;
+        case 2: printf("Measuring heart rate.\n"); break;
+        case 3: printf("Counting steps.\n"); break;
+        default: printf("Invalid choice.\n");
+}
+    return 0;
+}
