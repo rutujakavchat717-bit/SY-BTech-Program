@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+int main() 
+{
+    char direction[10];
+    printf("Enter Direction (LEFT / RIGHT): ");
+    scanf("%s", direction);
+    if (strcmp(direction, "LEFT") == 0)
+        printf("Fan Rotating Left\n");
+    else if (strcmp(direction, "RIGHT") == 0)
+        printf("Fan Rotating Right\n");
+    else
+        printf("Invalid Direction\n");
+    return 0;
+}
