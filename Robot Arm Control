@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+    int action;
+    printf("Robot Arm Control:\n1. Pick Object\n2. Place Object\n3. Stop\nEnter action: ");
+    scanf("%d", &action);
+    switch(action) 
+{
+        case 1: printf("Robot arm is PICKING the object.\n"); break;
+        case 2: printf("Robot arm is PLACING the object.\n"); break;
+        case 3: printf("Robot arm STOPPED.\n"); break;
+        default: printf("Invalid action.\n");
+    }
+    return 0;
+}
