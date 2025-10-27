@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+    int level;
+    printf("Robot Battery Status:\n1. Full\n2. Medium\n3. Low\nEnter level: ");
+    scanf("%d", &level);
+    switch(level) 
+{
+        case 1: printf("Battery FULL. Ready for operation.\n"); break;
+        case 2: printf("Battery at MEDIUM level.\n"); break;
+        case 3: printf("Battery LOW. Please recharge.\n"); break;
+        default: printf("Invalid input.\n");
+    }
+    return 0;
+}
