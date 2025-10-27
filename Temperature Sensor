@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+int main() 
+{
+    char mode[10];
+    printf("Enter Mode (READ / CALIBRATE): ");
+    scanf("%s", mode);
+    if (strcmp(mode, "READ") == 0)
+        printf("Temperature Reading Started\n");
+    else if (strcmp(mode, "CALIBRATE") == 0)
+        printf("Sensor Calibration in Progress\n");
+    else
+        printf("Invalid Mode\n");
+    return 0;
+}
