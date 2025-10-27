@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+    int access;
+    printf("Elevator Access:\n1. Ground Floor\n2. Office Floor\n3. Maintenance Floor\nEnter floor: ");
+    scanf("%d", &access);
+    switch(access) 
+{
+        case 1: printf("Accessing Ground Floor.\n"); break;
+        case 2: printf("Accessing Office Floor.\n"); break;
+        case 3: printf("Accessing Maintenance Floor.\n"); break;
+        default: printf("Invalid floor.\n");
+}
+    return 0;
+}
