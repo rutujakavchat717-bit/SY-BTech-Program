@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+int main() 
+{
+    char mode[10];
+    printf("Enter Mode (PHOTO / VIDEO): ");
+    scanf("%s", mode);
+    if (strcmp(mode, "PHOTO") == 0)
+        printf("Robot Camera Taking Photo\n");
+    else if (strcmp(mode, "VIDEO") == 0)
+        printf("Robot Camera Recording Video\n");
+    else
+        printf("Invalid Mode\n");
+    return 0;
+}
