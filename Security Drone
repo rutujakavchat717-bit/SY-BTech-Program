@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+int main() 
+{
+    char command[10];
+    printf("Enter Command (PATROL / RETURN): ");
+    scanf("%s", command);
+    if (strcmp(command, "PATROL") == 0)
+        printf("Drone Patrolling the Area\n");
+    else if (strcmp(command, "RETURN") == 0)
+        printf("Drone Returning to Base\n");
+    else
+        printf("Invalid Command\n");
+    return 0;
+}
