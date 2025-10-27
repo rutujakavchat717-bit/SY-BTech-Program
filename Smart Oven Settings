@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+    int setting;
+    printf("Oven Settings:\n1. Bake\n2. Grill\n3. Toast\nEnter setting: ");
+    scanf("%d", &setting);
+    switch(setting) 
+{
+        case 1: printf("Baking mode started.\n"); break;
+        case 2: printf("Grilling mode started.\n"); break;
+        case 3: printf("Toasting mode started.\n"); break;
+        default: printf("Invalid setting.\n");
+}
+    return 0;
+}
