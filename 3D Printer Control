@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+    int option;
+    printf("3D Printer Options:\n1. Start Print\n2. Pause Print\n3. Cancel Print\nEnter option: ");
+    scanf("%d", &option);
+    switch(option) 
+{
+        case 1: printf("Printing started.\n"); break;
+        case 2: printf("Printing paused.\n"); break;
+        case 3: printf("Printing cancelled.\n"); break;
+        default: printf("Invalid input.\n");
+}
+    return 0;
+}
