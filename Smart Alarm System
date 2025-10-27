@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+    int mode;
+    printf("Alarm System:\n1. Arm\n2. Disarm\n3. Panic\nEnter mode: ");
+    scanf("%d", &mode);
+    switch(mode) 
+{
+        case 1: printf("System armed.\n"); break;
+        case 2: printf("System disarmed.\n"); break;
+        case 3: printf("Panic alarm triggered!\n"); break;
+        default: printf("Invalid choice.\n");
+}
+    return 0;
+}
