@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+    int mode;
+    printf("Smart Light Modes:\n1. On\n2. Off\n3. Night Mode\nEnter mode: ");
+    scanf("%d", &mode);
+    switch(mode) 
+{
+        case 1: printf("Lights turned ON.\n"); break;
+        case 2: printf("Lights turned OFF.\n"); break;
+        case 3: printf("Night Mode activated.\n"); break;
+        default: printf("Invalid mode.\n");
+    }
+    return 0;
+}
