@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+    int mode;
+    printf("Autonomous Car Modes:\n1. Parking\n2. Driving\n3. Charging\nEnter mode: ");
+    scanf("%d", &mode);
+    switch(mode) 
+{
+        case 1: printf("Car in Parking mode.\n"); break;
+        case 2: printf("Car in Driving mode.\n"); break;
+        case 3: printf("Car is Charging.\n"); break;
+        default: printf("Invalid mode.\n");
+    }
+    return 0;
+}
