@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+int main() 
+{
+    char mode[10];
+    printf("Enter Mode (CHARGE / DISCHARGE): ");
+    scanf("%s", mode);
+    if (strcmp(mode, "CHARGE") == 0)
+        printf("Robot Battery Charging\n");
+    else if (strcmp(mode, "DISCHARGE") == 0)
+        printf("Robot Running on Battery Power\n");
+    else
+        printf("Invalid Mode\n");
+    return 0;
+}
