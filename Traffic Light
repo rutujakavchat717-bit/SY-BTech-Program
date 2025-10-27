@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+int main() 
+{
+    char color[10];
+    printf("Enter Color (RED / GREEN / YELLOW): ");
+    scanf("%s", color);
+    if (strcmp(color, "RED") == 0)
+        printf("Stop - RED Light\n");
+    else if (strcmp(color, "GREEN") == 0)
+        printf("Go - GREEN Light\n");
+    else if (strcmp(color, "YELLOW") == 0)
+        printf("Wait - YELLOW Light\n");
+    else
+        printf("Invalid Color\n");
+    return 0;
+}
