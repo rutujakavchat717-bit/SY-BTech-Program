@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+int main() 
+{
+    char command[10];
+    printf("Enter Command (PLAY / STOP): ");
+    scanf("%s", command);
+    if (strcmp(command, "PLAY") == 0)
+        printf("Playing Music...\n");
+    else if (strcmp(command, "STOP") == 0)
+        printf("Music Stopped\n");
+    else
+        printf("Invalid Command\n");
+    return 0;
+}
