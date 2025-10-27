@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+int main() 
+{
+    char command[10];
+    printf("Enter Command (LOCK / UNLOCK): ");
+    scanf("%s", command);
+    if (strcmp(command, "LOCK") == 0)
+        printf("Door Locked\n");
+    else if (strcmp(command, "UNLOCK") == 0)
+        printf("Door Unlocked\n");
+    else
+        printf("Invalid Command\n");
+    return 0;
+}
