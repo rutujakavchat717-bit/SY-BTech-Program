@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+struct Machine 
+{
+    int id;
+    char name[30];
+    float efficiency;
+    char condition[20];
+};
+
+int main() 
+{
+    struct Machine m;
+
+    printf("Enter Machine ID: ");
+    scanf("%d", &m.id);
+
+    printf("Enter Machine Name: ");
+    scanf("%s", m.name);
+
+    printf("Enter Efficiency (%%): ");
+    scanf("%f", &m.efficiency);
+
+    printf("Enter Condition: ");
+    scanf("%s", m.condition);
+
+    printf("\n MACHINE REPORT \n");
+    printf("ID: %d\n", m.id);
+    printf("Name: %s\n", m.name);
+    printf("Efficiency: %.2f%%\n", m.efficiency);
+    printf("Condition: %s\n", m.condition);
+
+    return 0;
+}
