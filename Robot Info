@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+struct Robot 
+{
+    int id;
+    char model[30];
+    float battery;
+    char mode[20];
+};
+
+int main() 
+{
+    struct Robot r;
+
+    printf("Enter Robot ID: ");
+    scanf("%d", &r.id);
+
+    printf("Enter Model Name: ");
+    scanf("%s", r.model);
+
+    printf("Enter Battery Level: ");
+    scanf("%f", &r.battery);
+
+    printf("Enter Mode (Idle/Active): ");
+    scanf("%s", r.mode);
+
+    printf("\n ROBOT INFORMATION \n");
+    printf("ID: %d\n", r.id);
+    printf("Model: %s\n", r.model);
+    printf("Battery: %.2f\n", r.battery);
+    printf("Mode: %s\n", r.mode);
+
+    return 0;
+}
