@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+struct Product 
+{
+    int id;
+    char name[30];
+    float price;
+    char category[20];
+};
+
+int main() 
+{
+    struct Product p;
+
+    printf("Enter Product ID: ");
+    scanf("%d", &p.id);
+
+    printf("Enter Product Name: ");
+    scanf("%s", p.name);
+
+    printf("Enter Price: ");
+    scanf("%f", &p.price);
+
+    printf("Enter Category: ");
+    scanf("%s", p.category);
+
+    printf("\n PRODUCT INFORMATION \n");
+    printf("ID: %d\n", p.id);
+    printf("Name: %s\n", p.name);
+    printf("Price: %.2f\n", p.price);
+    printf("Category: %s\n", p.category);
+
+    return 0;
+}
