@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+struct Teacher 
+{
+    int id;
+    char name[30];
+    float salary;
+    char subject[20];
+};
+
+int main() 
+{
+    struct Teacher t;
+
+    printf("Enter Teacher ID: ");
+    scanf("%d", &t.id);
+
+    printf("Enter Name: ");
+    scanf("%s", t.name);
+
+    printf("Enter Salary: ");
+    scanf("%f", &t.salary);
+
+    printf("Enter Subject: ");
+    scanf("%s", t.subject);
+
+    printf("\n TEACHER INFORMATION \n");
+    printf("ID: %d\n", t.id);
+    printf("Name: %s\n", t.name);
+    printf("Salary: %.2f\n", t.salary);
+    printf("Subject: %s\n", t.subject);
+
+    return 0;
+}
