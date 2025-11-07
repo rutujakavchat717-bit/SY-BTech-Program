@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+struct Channel 
+{
+    int number;
+    char name[30];
+    float rating;
+    char category[20];
+};
+
+int main() 
+{
+    struct Channel c;
+
+    printf("Enter Channel Number: ");
+    scanf("%d", &c.number);
+
+    printf("Enter Channel Name: ");
+    scanf("%s", c.name);
+
+    printf("Enter Rating: ");
+    scanf("%f", &c.rating);
+
+    printf("Enter Category: ");
+    scanf("%s", c.category);
+
+    printf("\n CHANNEL INFORMATION \n");
+    printf("Number: %d\n", c.number);
+    printf("Name: %s\n", c.name);
+    printf("Rating: %.2f\n", c.rating);
+    printf("Category: %s\n", c.category);
+
+    return 0;
+}
