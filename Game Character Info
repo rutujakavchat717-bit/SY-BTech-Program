@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+struct Character 
+{
+    int id;
+    char name[30];
+    float power;
+    char role[20];
+};
+
+int main() 
+{
+    struct Character c;
+
+    printf("Enter Character ID: ");
+    scanf("%d", &c.id);
+
+    printf("Enter Name: ");
+    scanf("%s", c.name);
+
+    printf("Enter Power Level: ");
+    scanf("%f", &c.power);
+
+    printf("Enter Role: ");
+    scanf("%s", c.role);
+
+    printf("\n CHARACTER INFORMATION \n");
+    printf("ID: %d\n", c.id);
+    printf("Name: %s\n", c.name);
+    printf("Power: %.2f\n", c.power);
+    printf("Role: %s\n", c.role);
+
+    return 0;
+}
