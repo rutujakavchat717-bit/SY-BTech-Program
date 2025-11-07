@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+struct Car 
+{
+    int id;
+    char brand[30];
+    float mileage;
+    char fuel[20];
+};
+
+int main() 
+{
+    struct Car c;
+
+    printf("Enter Car ID: ");
+    scanf("%d", &c.id);
+
+    printf("Enter Brand: ");
+    scanf("%s", c.brand);
+
+    printf("Enter Mileage: ");
+    scanf("%f", &c.mileage);
+
+    printf("Enter Fuel Type: ");
+    scanf("%s", c.fuel);
+
+    printf("\n CAR INFORMATION \n");
+    printf("ID: %d\n", c.id);
+    printf("Brand: %s\n", c.brand);
+    printf("Mileage: %.2f\n", c.mileage);
+    printf("Fuel: %s\n", c.fuel);
+
+    return 0;
+}
