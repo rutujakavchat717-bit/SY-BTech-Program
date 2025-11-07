@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+struct Item 
+{
+    int id;
+    char name[30];
+    float weight;
+    char category[20];
+};
+
+int main() 
+{
+    struct Item i;
+
+    printf("Enter Item ID: ");
+    scanf("%d", &i.id);
+
+    printf("Enter Name: ");
+    scanf("%s", i.name);
+
+    printf("Enter Weight: ");
+    scanf("%f", &i.weight);
+
+    printf("Enter Category: ");
+    scanf("%s", i.category);
+
+    printf("\n ITEM INFORMATION \n");
+    printf("ID: %d\n", i.id);
+    printf("Name: %s\n", i.name);
+    printf("Weight: %.2f\n", i.weight);
+    printf("Category: %s\n", i.category);
+
+    return 0;
+}
