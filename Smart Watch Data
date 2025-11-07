@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+struct SmartWatch 
+{
+    int id;
+    char model[30];
+    float heartRate;
+    char mode[20];
+};
+
+int main() 
+{
+    struct SmartWatch sw;
+
+    printf("Enter Smartwatch ID: ");
+    scanf("%d", &sw.id);
+
+    printf("Enter Model: ");
+    scanf("%s", sw.model);
+
+    printf("Enter Heart Rate: ");
+    scanf("%f", &sw.heartRate);
+
+    printf("Enter Mode: ");
+    scanf("%s", sw.mode);
+
+    printf("\n SMARTWATCH DATA \n");
+    printf("ID: %d\n", sw.id);
+    printf("Model: %s\n", sw.model);
+    printf("Heart Rate: %.2f bpm\n", sw.heartRate);
+    printf("Mode: %s\n", sw.mode);
+
+    return 0;
+}
