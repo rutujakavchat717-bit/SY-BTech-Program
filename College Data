@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+struct College 
+{
+    int id;
+    char name[30];
+    float grade;
+    char location[20];
+};
+
+int main() 
+{
+    struct College c;
+
+    printf("Enter College ID: ");
+    scanf("%d", &c.id);
+
+    printf("Enter College Name: ");
+    scanf("%s", c.name);
+
+    printf("Enter College Grade: ");
+    scanf("%f", &c.grade);
+
+    printf("Enter Location: ");
+    scanf("%s", c.location);
+
+    printf("\n COLLEGE INFORMATION \n");
+    printf("ID: %d\n", c.id);
+    printf("Name: %s\n", c.name);
+    printf("Grade: %.2f\n", c.grade);
+    printf("Location: %s\n", c.location);
+
+    return 0;
+}
