@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+struct Calibration 
+{
+    int id;
+    char sensorName[30];
+    float offset;
+    char result[20];
+};
+
+int main() 
+{
+    struct Calibration c;
+
+    printf("Enter Calibration ID: ");
+    scanf("%d", &c.id);
+
+    printf("Enter Sensor Name: ");
+    scanf("%s", c.sensorName);
+
+    printf("Enter Offset Value: ");
+    scanf("%f", &c.offset);
+
+    printf("Enter Result (OK/FAIL): ");
+    scanf("%s", c.result);
+
+    printf("\n CALIBRATION REPORT \n");
+    printf("ID: %d\n", c.id);
+    printf("Sensor: %s\n", c.sensorName);
+    printf("Offset: %.2f\n", c.offset);
+    printf("Result: %s\n", c.result);
+
+    return 0;
+}
