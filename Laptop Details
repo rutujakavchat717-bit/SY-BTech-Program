@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+struct Laptop 
+{
+    int id;
+    char brand[30];
+    float price;
+    char processor[20];
+};
+
+int main() 
+{
+    struct Laptop l;
+
+    printf("Enter Laptop ID: ");
+    scanf("%d", &l.id);
+
+    printf("Enter Brand: ");
+    scanf("%s", l.brand);
+
+    printf("Enter Price: ");
+    scanf("%f", &l.price);
+
+    printf("Enter Processor: ");
+    scanf("%s", l.processor);
+
+    printf("\n LAPTOP DETAILS \n");
+    printf("ID: %d\n", l.id);
+    printf("Brand: %s\n", l.brand);
+    printf("Price: %.2f\n", l.price);
+    printf("Processor: %s\n", l.processor);
+
+    return 0;
+}
