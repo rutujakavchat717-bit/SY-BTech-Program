@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+struct Package 
+{
+    int id;
+    char name[30];
+    float speed;
+    char validity[20];
+};
+
+int main() 
+{
+    struct Package p;
+
+    printf("Enter Package ID: ");
+    scanf("%d", &p.id);
+
+    printf("Enter Package Name: ");
+    scanf("%s", p.name);
+
+    printf("Enter Speed (Mbps): ");
+    scanf("%f", &p.speed);
+
+    printf("Enter Validity: ");
+    scanf("%s", p.validity);
+
+    printf("\n INTERNET PACKAGE DETAILS \n");
+    printf("ID: %d\n", p.id);
+    printf("Name: %s\n", p.name);
+    printf("Speed: %.2f Mbps\n", p.speed);
+    printf("Validity: %s\n", p.validity);
+
+    return 0;
+}
