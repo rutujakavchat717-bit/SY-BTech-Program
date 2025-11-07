@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+struct GPS 
+{
+    int id;
+    char location[30];
+    float accuracy;
+    char signal[20];
+};
+
+int main() 
+{
+    struct GPS g;
+
+    printf("Enter GPS ID: ");
+    scanf("%d", &g.id);
+
+    printf("Enter Location: ");
+    scanf("%s", g.location);
+
+    printf("Enter Accuracy (m): ");
+    scanf("%f", &g.accuracy);
+
+    printf("Enter Signal (Strong/Weak): ");
+    scanf("%s", g.signal);
+
+    printf("\n GPS DATA \n");
+    printf("ID: %d\n", g.id);
+    printf("Location: %s\n", g.location);
+    printf("Accuracy: %.2f m\n", g.accuracy);
+    printf("Signal: %s\n", g.signal);
+
+    return 0;
+}
