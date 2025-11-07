@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+struct Train 
+{
+    int number;
+    char name[30];
+    float distance;
+    char category[20];
+};
+
+int main() 
+{
+    struct Train t;
+
+    printf("Enter Train Number: ");
+    scanf("%d", &t.number);
+
+    printf("Enter Train Name: ");
+    scanf("%s", t.name);
+
+    printf("Enter Distance (km): ");
+    scanf("%f", &t.distance);
+
+    printf("Enter Category: ");
+    scanf("%s", t.category);
+
+    printf("\n TRAIN INFORMATION \n");
+    printf("Number: %d\n", t.number);
+    printf("Name: %s\n", t.name);
+    printf("Distance: %.2f km\n", t.distance);
+    printf("Category: %s\n", t.category);
+
+    return 0;
+}
