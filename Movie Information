@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+struct Movie 
+{
+    int id;
+    char title[30];
+    float rating;
+    char genre[20];
+};
+
+int main() 
+{
+    struct Movie m;
+
+    printf("Enter Movie ID: ");
+    scanf("%d", &m.id);
+
+    printf("Enter Title: ");
+    scanf("%s", m.title);
+
+    printf("Enter Rating: ");
+    scanf("%f", &m.rating);
+
+    printf("Enter Genre: ");
+    scanf("%s", m.genre);
+
+    printf("\n MOVIE INFORMATION \n");
+    printf("ID: %d\n", m.id);
+    printf("Title: %s\n", m.title);
+    printf("Rating: %.2f\n", m.rating);
+    printf("Genre: %s\n", m.genre);
+
+    return 0;
+}
