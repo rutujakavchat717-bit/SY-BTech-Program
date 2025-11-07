@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+struct Hospital 
+{
+    int id;
+    char name[30];
+    float rating;
+    char city[20];
+};
+
+int main() 
+{
+    struct Hospital h;
+
+    printf("Enter Hospital ID: ");
+    scanf("%d", &h.id);
+
+    printf("Enter Name: ");
+    scanf("%s", h.name);
+
+    printf("Enter Rating: ");
+    scanf("%f", &h.rating);
+
+    printf("Enter City: ");
+    scanf("%s", h.city);
+
+    printf("\n HOSPITAL INFORMATION \n");
+    printf("ID: %d\n", h.id);
+    printf("Name: %s\n", h.name);
+    printf("Rating: %.2f\n", h.rating);
+    printf("City: %s\n", h.city);
+
+    return 0;
+}
