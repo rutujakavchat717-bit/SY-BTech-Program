@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+struct Pump 
+{
+    int id;
+    char name[30];
+    float price;
+    char fuelType[20];
+};
+
+int main() 
+{
+    struct Pump p;
+
+    printf("Enter Pump ID: ");
+    scanf("%d", &p.id);
+
+    printf("Enter Pump Name: ");
+    scanf("%s", p.name);
+
+    printf("Enter Price per Litre: ");
+    scanf("%f", &p.price);
+
+    printf("Enter Fuel Type: ");
+    scanf("%s", p.fuelType);
+
+    printf("\n PETROL PUMP INFORMATION \n");
+    printf("ID: %d\n", p.id);
+    printf("Name: %s\n", p.name);
+    printf("Price: %.2f\n", p.price);
+    printf("Fuel Type: %s\n", p.fuelType);
+
+    return 0;
+}
