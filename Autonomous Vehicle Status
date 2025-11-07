@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+struct Vehicle 
+{
+    int id;
+    char model[30];
+    float speed;
+    char mode[20];
+};
+
+int main() 
+{
+    struct Vehicle v;
+
+    printf("Enter Vehicle ID: ");
+    scanf("%d", &v.id);
+
+    printf("Enter Model: ");
+    scanf("%s", v.model);
+
+    printf("Enter Speed: ");
+    scanf("%f", &v.speed);
+
+    printf("Enter Mode (Auto/Manual): ");
+    scanf("%s", v.mode);
+
+    printf("\n VEHICLE STATUS \n");
+    printf("ID: %d\n", v.id);
+    printf("Model: %s\n", v.model);
+    printf("Speed: %.2f km/h\n", v.speed);
+    printf("Mode: %s\n", v.mode);
+
+    return 0;
+}
