@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+struct Track 
+{
+    int id;
+    char title[30];
+    float duration;
+    char artist[20];
+};
+
+int main() 
+{
+    struct Track t;
+
+    printf("Enter Track ID: ");
+    scanf("%d", &t.id);
+
+    printf("Enter Title: ");
+    scanf("%s", t.title);
+
+    printf("Enter Duration (min): ");
+    scanf("%f", &t.duration);
+
+    printf("Enter Artist: ");
+    scanf("%s", t.artist);
+
+    printf("\n TRACK DETAILS \n");
+    printf("ID: %d\n", t.id);
+    printf("Title: %s\n", t.title);
+    printf("Duration: %.2f min\n", t.duration);
+    printf("Artist: %s\n", t.artist);
+
+    return 0;
+}
