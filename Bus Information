@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+struct Bus 
+{
+    int number;
+    char route[30];
+    float fare;
+    char type[20];
+};
+
+int main() 
+{
+    struct Bus b;
+
+    printf("Enter Bus Number: ");
+    scanf("%d", &b.number);
+
+    printf("Enter Route Name: ");
+    scanf("%s", b.route);
+
+    printf("Enter Fare: ");
+    scanf("%f", &b.fare);
+
+    printf("Enter Bus Type: ");
+    scanf("%s", b.type);
+
+    printf("\n BUS INFORMATION \n");
+    printf("Number: %d\n", b.number);
+    printf("Route: %s\n", b.route);
+    printf("Fare: %.2f\n", b.fare);
+    printf("Type: %s\n", b.type);
+
+    return 0;
+}
