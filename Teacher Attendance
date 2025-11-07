@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+struct Attendance 
+{
+    int id;
+    char name[30];
+    float hours;
+    char remark[20];
+};
+
+int main() 
+{
+    struct Attendance a;
+
+    printf("Enter Teacher ID: ");
+    scanf("%d", &a.id);
+
+    printf("Enter Name: ");
+    scanf("%s", a.name);
+
+    printf("Enter Hours Worked: ");
+    scanf("%f", &a.hours);
+
+    printf("Enter Remark (Present/Absent): ");
+    scanf("%s", a.remark);
+
+    printf("\n ATTENDANCE REPORT \n");
+    printf("ID: %d\n", a.id);
+    printf("Name: %s\n", a.name);
+    printf("Hours: %.2f\n", a.hours);
+    printf("Remark: %s\n", a.remark);
+
+    return 0;
+}
