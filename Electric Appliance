@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+struct Appliance 
+{
+    int id;
+    char name[30];
+    float power;
+    char state[20];
+};
+
+int main() 
+{
+    struct Appliance a;
+
+    printf("Enter Appliance ID: ");
+    scanf("%d", &a.id);
+
+    printf("Enter Name: ");
+    scanf("%s", a.name);
+
+    printf("Enter Power (Watts): ");
+    scanf("%f", &a.power);
+
+    printf("Enter State: ");
+    scanf("%s", a.state);
+
+    printf("\n APPLIANCE INFORMATION \n");
+    printf("ID: %d\n", a.id);
+    printf("Name: %s\n", a.name);
+    printf("Power: %.2f W\n", a.power);
+    printf("State: %s\n", a.state);
+
+    return 0;
+}
