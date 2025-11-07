@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+struct Joint 
+{
+    int id;
+    char name[30];
+    float angle;
+    char condition[20];
+};
+
+int main() 
+{
+    struct Joint j;
+
+    printf("Enter Joint ID: ");
+    scanf("%d", &j.id);
+
+    printf("Enter Joint Name: ");
+    scanf("%s", j.name);
+
+    printf("Enter Angle: ");
+    scanf("%f", &j.angle);
+
+    printf("Enter Condition: ");
+    scanf("%s", j.condition);
+
+    printf("\n ROBOT JOINT INFORMATION \n");
+    printf("ID: %d\n", j.id);
+    printf("Name: %s\n", j.name);
+    printf("Angle: %.2f\n", j.angle);
+    printf("Condition: %s\n", j.condition);
+
+    return 0;
+}
