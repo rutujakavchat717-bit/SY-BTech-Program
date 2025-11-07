@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+struct Weather 
+{
+    int id;
+    char city[30];
+    float temperature;
+    char condition[20];
+};
+
+int main() 
+{
+    struct Weather w;
+
+    printf("Enter Weather ID: ");
+    scanf("%d", &w.id);
+
+    printf("Enter City: ");
+    scanf("%s", w.city);
+
+    printf("Enter Temperature: ");
+    scanf("%f", &w.temperature);
+
+    printf("Enter Condition (Sunny/Rainy): ");
+    scanf("%s", w.condition);
+
+    printf("\n WEATHER REPORT \n");
+    printf("ID: %d\n", w.id);
+    printf("City: %s\n", w.city);
+    printf("Temperature: %.2f\n", w.temperature);
+    printf("Condition: %s\n", w.condition);
+
+    return 0;
+}
