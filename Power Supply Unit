@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+struct PSU 
+{
+    int id;
+    char brand[30];
+    float voltage;
+    char state[20];
+};
+
+int main() 
+{
+    struct PSU p;
+
+    printf("Enter PSU ID: ");
+    scanf("%d", &p.id);
+
+    printf("Enter Brand: ");
+    scanf("%s", p.brand);
+
+    printf("Enter Voltage: ");
+    scanf("%f", &p.voltage);
+
+    printf("Enter State (ON/OFF): ");
+    scanf("%s", p.state);
+
+    printf("\n POWER SUPPLY DETAILS \n");
+    printf("ID: %d\n", p.id);
+    printf("Brand: %s\n", p.brand);
+    printf("Voltage: %.2fV\n", p.voltage);
+    printf("State: %s\n", p.state);
+
+    return 0;
+}
