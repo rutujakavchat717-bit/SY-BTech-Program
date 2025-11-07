@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+struct DroneDelivery 
+{
+    int id;
+    char destination[30];
+    float distance;
+    char mode[20];
+};
+
+int main() 
+{
+    struct DroneDelivery d;
+
+    printf("Enter Delivery ID: ");
+    scanf("%d", &d.id);
+
+    printf("Enter Destination: ");
+    scanf("%s", d.destination);
+
+    printf("Enter Distance (km): ");
+    scanf("%f", &d.distance);
+
+    printf("Enter Mode (Auto/Manual): ");
+    scanf("%s", d.mode);
+
+    printf("\n DRONE DELIVERY DETAILS \n");
+    printf("ID: %d\n", d.id);
+    printf("Destination: %s\n", d.destination);
+    printf("Distance: %.2f km\n", d.distance);
+    printf("Mode: %s\n", d.mode);
+
+    return 0;
+}
