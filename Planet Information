@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+struct Planet 
+{
+    int id;
+    char name[30];
+    float distance;
+    char type[20];
+};
+
+int main() 
+{
+    struct Planet p;
+
+    printf("Enter Planet ID: ");
+    scanf("%d", &p.id);
+
+    printf("Enter Planet Name: ");
+    scanf("%s", p.name);
+
+    printf("Enter Distance from Sun (million km): ");
+    scanf("%f", &p.distance);
+
+    printf("Enter Type (Gas/Rocky): ");
+    scanf("%s", p.type);
+
+    printf("\n PLANET DETAILS \n");
+    printf("ID: %d\n", p.id);
+    printf("Name: %s\n", p.name);
+    printf("Distance: %.2f million km\n", p.distance);
+    printf("Type: %s\n", p.type);
+
+    return 0;
+}
