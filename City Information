@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+struct City 
+{
+    int code;
+    char name[30];
+    float population;
+    char state[20];
+};
+
+int main() 
+{
+    struct City c;
+
+    printf("Enter City Code: ");
+    scanf("%d", &c.code);
+
+    printf("Enter City Name: ");
+    scanf("%s", c.name);
+
+    printf("Enter Population (in lakhs): ");
+    scanf("%f", &c.population);
+
+    printf("Enter State: ");
+    scanf("%s", c.state);
+
+    printf("\n CITY INFORMATION \n");
+    printf("Code: %d\n", c.code);
+    printf("Name: %s\n", c.name);
+    printf("Population: %.2f lakh\n", c.population);
+    printf("State: %s\n", c.state);
+
+    return 0;
+}
