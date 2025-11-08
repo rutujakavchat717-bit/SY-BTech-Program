@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main() 
+{
+    float alt[5] = {150.5, 200.8, 250.2, 300.6, 350.9};
+    float *ptr;
+    int i;
+
+    ptr = alt;
+
+    printf("Altitude Sensor Data:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("alt[%d] = %.2f\n", i, alt[i]);
+    }
+
+    printf("\nUsing pointer:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("Altitude %d: %.2f\n", i+1, *(ptr+i));
+    }
+}
