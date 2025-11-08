@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main() 
+{
+    float rpm[5] = {800.0, 1500.5, 2000.2, 2500.9, 3000.3};
+    float *ptr;
+    int i;
+
+    ptr = rpm;
+
+    printf("Engine RPM:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("rpm[%d] = %.2f\n", i, rpm[i]);
+    }
+
+    printf("\nPointer Output:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("RPM %d: %.2f\n", i+1, *(ptr+i));
+    }
+}
