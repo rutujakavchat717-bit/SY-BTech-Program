@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main() 
+{
+    float wind[5] = {5.2, 7.1, 8.4, 10.6, 12.8};
+    float *ptr;
+    int i;
+
+    ptr = wind;
+
+    printf("Wind Speed Readings:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("wind[%d] = %.2f\n", i, wind[i]);
+    }
+
+    printf("\nDisplaying using pointer:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("Wind %d: %.2f\n", i+1, *(ptr+i));
+    }
+}
