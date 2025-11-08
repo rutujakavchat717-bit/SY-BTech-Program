@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main() 
+{
+    float light[5] = {120.5, 140.3, 160.1, 180.7, 200.9};
+    float *ptr;
+    int i;
+
+    ptr = light;
+
+    printf("Light Intensity Levels:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("light[%d] = %.2f\n", i, light[i]);
+    }
+
+    printf("\nDisplaying using pointer:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("Light %d: %.2f\n", i+1, *(ptr+i));
+    }
+}
