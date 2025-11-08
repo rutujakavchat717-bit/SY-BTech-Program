@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main() 
+{
+    float speed[5] = {12.5, 14.8, 16.2, 18.5, 20.0};
+    float *ptr;
+    int i;
+
+    ptr = speed;
+
+    printf("Speed Readings:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("speed[%d] = %.2f\n", i, speed[i]);
+    }
+
+    printf("\nDisplaying using pointer:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("Speed %d: %.2f\n", i+1, *(ptr+i));
+    }
+}
