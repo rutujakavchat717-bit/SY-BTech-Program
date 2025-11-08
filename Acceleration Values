@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main() 
+{
+    float accel[5] = {1.2, 2.4, 3.6, 4.8, 6.0};
+    float *ptr;
+    int i;
+
+    ptr = accel;
+
+    printf("Acceleration Values:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("accel[%d] = %.2f\n", i, accel[i]);
+    }
+
+    printf("\nDisplaying using pointer:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("Acceleration %d: %.2f\n", i+1, *(ptr+i));
+    }
+}
