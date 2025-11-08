@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main() 
+{
+    float mag[5] = {0.5, 1.2, 2.5, 3.7, 4.9};
+    float *ptr;
+    int i;
+
+    ptr = mag;
+
+    printf("Magnetic Field Strength:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("mag[%d] = %.2f\n", i, mag[i]);
+    }
+
+    printf("\nDisplaying using pointer:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("Magnetic %d: %.2f\n", i+1, *(ptr+i));
+    }
+}
