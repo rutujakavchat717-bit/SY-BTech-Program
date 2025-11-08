@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main() 
+{
+    float load[5] = {10.0, 20.5, 35.2, 50.1, 65.8};
+    float *ptr;
+    int i;
+
+    ptr = load;
+
+    printf("CPU Load Readings:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("load[%d] = %.2f\n", i, load[i]);
+    }
+
+    printf("\nDisplaying using pointer:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("Load %d: %.2f\n", i+1, *(ptr+i));
+    }
+}
