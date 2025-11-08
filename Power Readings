@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main() 
+{
+    float power[5] = {100.5, 120.0, 130.3, 150.7, 180.1};
+    float *ptr;
+    int i;
+
+    ptr = power;
+
+    printf("Power Readings:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("power[%d] = %.2f\n", i, power[i]);
+    }
+
+    printf("\nDisplaying using pointer:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("Power %d: %.2f\n", i+1, *(ptr+i));
+    }
+}
