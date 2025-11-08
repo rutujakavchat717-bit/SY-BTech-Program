@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main() 
+{
+    float batt[5] = {3.2, 3.8, 4.1, 4.5, 4.9};
+    float *ptr;
+    int i;
+
+    ptr = batt;
+
+    printf("Battery Voltage Levels:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("batt[%d] = %.2f\n", i, batt[i]);
+    }
+
+    printf("\nDisplaying using pointer:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("Voltage %d: %.2f\n", i+1, *(ptr+i));
+    }
+}
