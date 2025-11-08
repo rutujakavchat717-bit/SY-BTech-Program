@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main() 
+{
+    float angle[5] = {15.5, 30.0, 45.7, 60.4, 75.2};
+    float *ptr;
+    int i;
+
+    ptr = angle;
+
+    printf("Robot Joint Angles:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("angle[%d] = %.2f\n", i, angle[i]);
+    }
+
+    printf("\nPointer Display:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("Angle %d: %.2f°\n", i+1, *(ptr+i));
+    }
+}
