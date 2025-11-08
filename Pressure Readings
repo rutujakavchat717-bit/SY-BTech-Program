@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main() 
+{
+    float pressure[5] = {1.2, 2.3, 3.5, 4.1, 5.0};
+    float *ptr;
+    int i;
+
+    ptr = pressure;
+
+    printf("Pressure Readings:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("pressure[%d] = %.2f\n", i, pressure[i]);
+    }
+
+    printf("\nDisplaying using pointer:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("Pressure %d: %.2f\n", i+1, *(ptr+i));
+    }
+}
