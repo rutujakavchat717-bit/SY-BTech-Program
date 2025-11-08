@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main() 
+{
+    float temp[5] = {25.5, 30.1, 27.8, 29.3, 31.0};
+    float *ptr;
+    int i;
+
+    ptr = temp;
+
+    printf("Temperature Readings:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("temp[%d] = %.2f\n", i, temp[i]);
+    }
+
+    printf("\nDisplaying using pointer:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("Temperature %d: %.2f\n", i+1, *(ptr+i));
+    }
+}
