@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main() 
+{
+    float soil[5] = {22.1, 28.4, 35.2, 42.0, 48.7};
+    float *ptr;
+    int i;
+
+    ptr = soil;
+
+    printf("Soil Moisture Levels:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("soil[%d] = %.2f\n", i, soil[i]);
+    }
+
+    printf("\nPointer Display:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("Moisture %d: %.2f\n", i+1, *(ptr+i));
+    }
+}
