@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main() 
+{
+    float solar[5] = {110.5, 125.8, 140.2, 155.6, 170.9};
+    float *ptr;
+    int i;
+
+    ptr = solar;
+
+    printf("Solar Panel Output:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("solar[%d] = %.2f\n", i, solar[i]);
+    }
+
+    printf("\nPointer Output:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("Output %d: %.2f\n", i+1, *(ptr+i));
+    }
+}
