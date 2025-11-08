@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main() 
+{
+    float belt[5] = {0.8, 1.5, 2.3, 3.2, 4.0};
+    float *ptr;
+    int i;
+
+    ptr = belt;
+
+    printf("Conveyor Belt Speed:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("belt[%d] = %.2f\n", i, belt[i]);
+    }
+
+    printf("\nPointer Output:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("Speed %d: %.2f\n", i+1, *(ptr+i));
+    }
+}
