@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main() 
+{
+    float gpu[5] = {25.5, 40.3, 55.6, 70.9, 85.2};
+    float *ptr;
+    int i;
+
+    ptr = gpu;
+
+    printf("GPU Load Levels:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("gpu[%d] = %.2f\n", i, gpu[i]);
+    }
+
+    printf("\nPointer Display:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("Load %d: %.2f\n", i+1, *(ptr+i));
+    }
+}
