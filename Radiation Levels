@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main() 
+{
+    float rad[5] = {0.05, 0.10, 0.15, 0.18, 0.22};
+    float *ptr;
+    int i;
+
+    ptr = rad;
+
+    printf("Radiation Levels:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("rad[%d] = %.2f\n", i, rad[i]);
+    }
+
+    printf("\nDisplaying using pointer:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("Radiation %d: %.2f\n", i+1, *(ptr+i));
+    }
+}
