@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main() 
+{
+    float water[5] = {5.5, 10.2, 15.8, 20.9, 25.3};
+    float *ptr;
+    int i;
+
+    ptr = water;
+
+    printf("Water Level Measurements:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("water[%d] = %.2f\n", i, water[i]);
+    }
+
+    printf("\nDisplaying using pointer:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("Water Level %d: %.2f\n", i+1, *(ptr+i));
+    }
+}
