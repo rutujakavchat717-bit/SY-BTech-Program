@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main() 
+{
+    float droneAlt[5] = {10.5, 20.3, 35.7, 50.2, 65.4};
+    float *ptr;
+    int i;
+
+    ptr = droneAlt;
+
+    printf("Drone Altitudes:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("droneAlt[%d] = %.2f\n", i, droneAlt[i]);
+    }
+
+    printf("\nPointer Output:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("Altitude %d: %.2f m\n", i+1, *(ptr+i));
+    }
+}
