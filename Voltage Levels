@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main() 
+{
+    float volt[5] = {3.3, 5.0, 9.0, 12.0, 15.5};
+    float *ptr;
+    int i;
+
+    ptr = volt;
+
+    printf("Voltage Levels:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("volt[%d] = %.2f\n", i, volt[i]);
+    }
+
+    printf("\nDisplaying using pointer:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("Voltage %d: %.2f\n", i+1, *(ptr+i));
+    }
+}
