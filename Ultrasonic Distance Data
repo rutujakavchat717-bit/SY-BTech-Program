@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main() 
+{
+    float us[5] = {12.4, 24.8, 37.6, 50.2, 63.9};
+    float *ptr;
+    int i;
+
+    ptr = us;
+
+    printf("Ultrasonic Sensor Distance:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("us[%d] = %.2f\n", i, us[i]);
+    }
+
+    printf("\nPointer Reading:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("Distance %d: %.2f\n", i+1, *(ptr+i));
+    }
+}
