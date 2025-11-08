@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main() 
+{
+    float humidity[5] = {45.5, 50.0, 55.2, 60.3, 65.7};
+    float *ptr;
+    int i;
+
+    ptr = humidity;
+
+    printf("Humidity Readings:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("humidity[%d] = %.2f\n", i, humidity[i]);
+    }
+
+    printf("\nDisplaying using pointer:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("Humidity %d: %.2f\n", i+1, *(ptr+i));
+    }
+}
