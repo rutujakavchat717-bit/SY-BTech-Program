@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main() 
+{
+    float sound[5] = {30.2, 45.3, 60.1, 75.0, 89.5};
+    float *ptr;
+    int i;
+
+    ptr = sound;
+
+    printf("Sound Level Readings:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("sound[%d] = %.2f\n", i, sound[i]);
+    }
+
+    printf("\nDisplaying using pointer:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("Sound %d: %.2f\n", i+1, *(ptr+i));
+    }
+}
