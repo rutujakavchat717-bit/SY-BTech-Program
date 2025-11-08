@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main() 
+{
+    float fuel[5] = {2.3, 3.7, 4.8, 6.1, 7.4};
+    float *ptr;
+    int i;
+
+    ptr = fuel;
+
+    printf("Fuel Consumption Values:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("fuel[%d] = %.2f\n", i, fuel[i]);
+    }
+
+    printf("\nDisplaying using pointer:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("Fuel %d: %.2f\n", i+1, *(ptr+i));
+    }
+}
