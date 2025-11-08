@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main() 
+{
+    float drain[5] = {1.1, 2.3, 3.4, 4.2, 5.0};
+    float *ptr;
+    int i;
+
+    ptr = drain;
+
+    printf("Battery Drain Values:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("drain[%d] = %.2f\n", i, drain[i]);
+    }
+
+    printf("\nUsing pointer:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("Drain %d: %.2f\n", i+1, *(ptr+i));
+    }
+}
