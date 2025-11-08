@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main() 
+{
+    float serverTemp[5] = {55.1, 60.4, 65.8, 70.2, 75.6};
+    float *ptr;
+    int i;
+
+    ptr = serverTemp;
+
+    printf("Server Temperature Logs:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("serverTemp[%d] = %.2f\n", i, serverTemp[i]);
+    }
+
+    printf("\nPointer Readings:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("Temp %d: %.2f°C\n", i+1, *(ptr+i));
+    }
+}
