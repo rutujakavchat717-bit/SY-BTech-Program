@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main() 
+{
+    float hr[5] = {72.5, 80.3, 85.9, 90.1, 95.6};
+    float *ptr;
+    int i;
+
+    ptr = hr;
+
+    printf("Heart Rate Readings:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("hr[%d] = %.2f\n", i, hr[i]);
+    }
+
+    printf("\nPointer Output:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("Heart Rate %d: %.2f bpm\n", i+1, *(ptr+i));
+    }
+}
