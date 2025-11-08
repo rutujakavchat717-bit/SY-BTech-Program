@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main() 
+{
+    float armTorque[5] = {12.5, 15.8, 18.0, 19.7, 21.3};
+    float *ptr;
+    int i;
+
+    ptr = armTorque;
+
+    printf("Robot Arm Torque Values:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("armTorque[%d] = %.2f\n", i, armTorque[i]);
+    }
+
+    printf("\nUsing pointer:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("Torque %d: %.2f\n", i+1, *(ptr+i));
+    }
+}
