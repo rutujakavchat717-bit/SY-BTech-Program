@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main() 
+{
+    float grip[5] = {3.5, 4.7, 6.2, 7.4, 9.1};
+    float *ptr;
+    int i;
+
+    ptr = grip;
+
+    printf("Grip Force Values:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("grip[%d] = %.2f\n", i, grip[i]);
+    }
+
+    printf("\nPointer Output:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("Grip %d: %.2f\n", i+1, *(ptr+i));
+    }
+}
