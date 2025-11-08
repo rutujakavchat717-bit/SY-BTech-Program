@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main() 
+{
+    float cpuTemp[5] = {45.2, 50.8, 55.1, 60.3, 65.9};
+    float *ptr;
+    int i;
+
+    ptr = cpuTemp;
+
+    printf("CPU Temperatures:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("cpuTemp[%d] = %.2f\n", i, cpuTemp[i]);
+    }
+
+    printf("\nPointer Display:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("Temp %d: %.2f\n", i+1, *(ptr+i));
+    }
+}
