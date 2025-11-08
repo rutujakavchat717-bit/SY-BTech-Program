@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main()  
+{
+    float laser[5] = {15.1, 18.3, 20.7, 25.2, 27.8};
+    float *ptr;
+    int i;
+
+    ptr = laser;
+
+    printf("Laser Intensity Values:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("laser[%d] = %.2f\n", i, laser[i]);
+    }
+
+    printf("\nDisplaying using pointer:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("Intensity %d: %.2f\n", i+1, *(ptr+i));
+    }
+}
