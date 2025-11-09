@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <conio.h>
+void main()
+{
+    FILE *fp;
+    float sensor[20];
+    int n, i;
+
+    printf("Enter number of noise readings: ");
+    scanf("%d", &n);
+
+    fp = fopen("noise_pollution_log.txt", "w");
+    if(fp == NULL)
+    {
+        printf("Error opening file!");
+        getch();
+        return;
+    }
+
+    fprintf(fp, "Noise Pollution Log\n");
+    fprintf(fp, "--------------------\n");
+
+    for(i=0; i<n; i++)
+    {
+        printf("Enter noise level %d: ", i+1);
+        scanf("%f", &sensor[i]);
+        fprintf(fp, "Noise %d = %.2f dB\n", i+1, sensor[i]);
+    }
+
+    fclose(fp);
+
+    printf("Noise readings saved to 'noise_pollution_log.txt'.\n");
+}
