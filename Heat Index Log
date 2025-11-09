@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <conio.h>
+void main()
+{
+    FILE *fp;
+    float sensor[20];
+    int n, i;
+
+    printf("Enter number of heat index readings: ");
+    scanf("%d", &n);
+
+    fp = fopen("heat_index_log.txt", "w");
+    if(fp == NULL)
+    {
+        printf("Error opening file!");
+        getch();
+        return;
+    }
+
+    fprintf(fp, "Heat Index Log\n");
+    fprintf(fp, "---------------\n");
+
+    for(i=0; i<n; i++)
+    {
+        printf("Enter heat index %d: ", i+1);
+        scanf("%f", &sensor[i]);
+        fprintf(fp, "Heat Index %d = %.2f°C\n", i+1, sensor[i]);
+    }
+
+    fclose(fp);
+
+    printf("Heat index saved to 'heat_index_log.txt'.\n");
+}
