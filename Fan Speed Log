@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <conio.h>
+void main()
+{
+    FILE *fp;
+    float sensor[20];
+    int n, i;
+
+    printf("Enter number of fan speed entries: ");
+    scanf("%d", &n);
+
+    fp = fopen("fan_speed_log.txt", "w");
+    if(fp == NULL)
+    {
+        printf("Error opening file!");
+        getch();
+        return;
+    }
+
+    fprintf(fp, "Fan Speed Log\n");
+    fprintf(fp, "--------------\n");
+
+    for(i=0; i<n; i++)
+    {
+        printf("Enter fan speed %d: ", i+1);
+        scanf("%f", &sensor[i]);
+        fprintf(fp, "Fan %d = %.2f RPM\n", i+1, sensor[i]);
+    }
+
+    fclose(fp);
+
+    printf("Fan speeds saved to 'fan_speed_log.txt'.\n");
+}
