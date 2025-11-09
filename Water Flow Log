@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <conio.h>
+void main()
+{
+    FILE *fp;
+    float sensor[20];
+    int n, i;
+
+    printf("Enter number of water flow readings: ");
+    scanf("%d", &n);
+
+    fp = fopen("water_flow_log.txt", "w");
+    if(fp == NULL)
+    {
+        printf("Error opening file!");
+        getch();
+        return;
+    }
+
+    fprintf(fp, "Water Flow Log\n");
+    fprintf(fp, "---------------\n");
+
+    for(i=0; i<n; i++)
+    {
+        printf("Enter flow %d: ", i+1);
+        scanf("%f", &sensor[i]);
+        fprintf(fp, "Flow %d = %.2f L/s\n", i+1, sensor[i]);
+    }
+
+    fclose(fp);
+
+    printf("Water flow saved to 'water_flow_log.txt'.\n");
+}
