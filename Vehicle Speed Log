@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <conio.h>
+void main()
+{
+    FILE *fp;
+    float sensor[20];
+    int n, i;
+
+    printf("Enter total speed readings: ");
+    scanf("%d", &n);
+
+    fp = fopen("vehicle_speed_log.txt", "w");
+    if(fp == NULL)
+    {
+        printf("Error opening file!");
+        getch();
+        return;
+    }
+
+    fprintf(fp, "Vehicle Speed Log\n");
+    fprintf(fp, "------------------\n");
+
+    for(i=0; i<n; i++)
+    {
+        printf("Enter speed %d: ", i+1);
+        scanf("%f", &sensor[i]);
+        fprintf(fp, "Speed %d = %.2f km/h\n", i+1, sensor[i]);
+    }
+
+    fclose(fp);
+
+    printf("Speed readings saved to 'vehicle_speed_log.txt'.\n");
+}
