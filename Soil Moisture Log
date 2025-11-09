@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <conio.h>
+void main()
+{
+    FILE *fp;
+    float sensor[20];
+    int n, i;
+
+    printf("Enter number of moisture readings: ");
+    scanf("%d", &n);
+
+    fp = fopen("soil_moisture_log.txt", "w");
+    if(fp == NULL)
+    {
+        printf("Error opening file!");
+        getch();
+        return;
+    }
+
+    fprintf(fp, "Soil Moisture Log\n");
+    fprintf(fp, "------------------\n");
+
+    for(i=0; i<n; i++)
+    {
+        printf("Enter moisture %d: ", i+1);
+        scanf("%f", &sensor[i]);
+        fprintf(fp, "Moisture %d = %.2f%%\n", i+1, sensor[i]);
+    }
+
+    fclose(fp);
+
+    printf("Soil moisture saved to 'soil_moisture_log.txt'.\n");
+}
