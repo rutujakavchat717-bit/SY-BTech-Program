@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <conio.h>
+void main()
+{
+    FILE *fp;
+    float sensor[20];
+    int n, i;
+
+    printf("Enter number of altitude readings: ");
+    scanf("%d", &n);
+
+    fp = fopen("altitude_log.txt", "w");
+    if(fp == NULL)
+    {
+        printf("Error opening file!");
+        getch();
+        return;
+    }
+
+    fprintf(fp, "Altitude Reading Log\n");
+    fprintf(fp, "---------------------\n");
+
+    for(i=0; i<n; i++)
+    {
+        printf("Enter altitude %d: ", i+1);
+        scanf("%f", &sensor[i]);
+        fprintf(fp, "Altitude %d = %.2f m\n", i+1, sensor[i]);
+    }
+
+    fclose(fp);
+
+    printf("Altitude readings saved to 'altitude_log.txt'.\n");
+}
