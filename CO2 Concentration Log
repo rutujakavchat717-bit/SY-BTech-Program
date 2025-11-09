@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <conio.h>
+void main()
+{
+    FILE *fp;
+    float sensor[20];
+    int n, i;
+
+    printf("Enter number of CO2 readings: ");
+    scanf("%d", &n);
+
+    fp = fopen("co2_log.txt", "w");
+    if(fp == NULL)
+    {
+        printf("Error opening file!");
+        getch();
+        return;
+    }
+
+    fprintf(fp, "CO2 Concentration Log\n");
+    fprintf(fp, "----------------------\n");
+
+    for(i=0; i<n; i++)
+    {
+        printf("Enter CO2 value %d: ", i+1);
+        scanf("%f", &sensor[i]);
+        fprintf(fp, "CO2 %d = %.2f ppm\n", i+1, sensor[i]);
+    }
+
+    fclose(fp);
+
+    printf("CO2 readings saved to 'co2_log.txt'.\n");
+}
