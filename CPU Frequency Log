@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <conio.h>
+void main()
+{
+    FILE *fp;
+    float sensor[20];
+    int n, i;
+
+    printf("Enter number of CPU frequency readings: ");
+    scanf("%d", &n);
+
+    fp = fopen("cpu_frequency_log.txt", "w");
+    if(fp == NULL)
+    {
+        printf("Error opening file!");
+        getch();
+        return;
+    }
+
+    fprintf(fp, "CPU Frequency Log\n");
+    fprintf(fp, "------------------\n");
+
+    for(i=0; i<n; i++)
+    {
+        printf("Enter frequency %d: ", i+1);
+        scanf("%f", &sensor[i]);
+        fprintf(fp, "Frequency %d = %.2f MHz\n", i+1, sensor[i]);
+    }
+
+    fclose(fp);
+
+    printf("CPU frequency saved to 'cpu_frequency_log.txt'.\n");
+}
