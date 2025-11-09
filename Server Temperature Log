@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <conio.h>
+void main()
+{
+    FILE *fp;
+    float sensor[20];
+    int n, i;
+
+    printf("Enter number of server temperature readings: ");
+    scanf("%d", &n);
+
+    fp = fopen("server_temperature_log.txt", "w");
+    if(fp == NULL)
+    {
+        printf("Error opening file!");
+        getch();
+        return;
+    }
+
+    fprintf(fp, "Server Temperature Log\n");
+    fprintf(fp, "------------------------\n");
+
+    for(i=0; i<n; i++)
+    {
+        printf("Enter server temperature %d: ", i+1);
+        scanf("%f", &sensor[i]);
+        fprintf(fp, "Temp %d = %.2f °C\n", i+1, sensor[i]);
+    }
+
+    fclose(fp);
+
+    printf("Server temperature saved to 'server_temperature_log.txt'.\n");
+}
