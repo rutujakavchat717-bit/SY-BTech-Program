@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main() 
+{
+    float engTemp[5] = {70.2, 80.5, 92.8, 101.6, 110.3};
+    float *ptr;
+    int i;
+
+    ptr = engTemp;
+
+    printf("Engine Temperature:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("engTemp[%d] = %.2f\n", i, engTemp[i]);
+    }
+
+    printf("\nPointer Temp Output:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("Temp %d: %.2f°C\n", i+1, *(ptr+i));
+    }
+}
