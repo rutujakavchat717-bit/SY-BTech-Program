@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <conio.h>
+void main()
+{
+    FILE *fp;
+    float sensor[20];
+    int n, i;
+
+    printf("Enter number of radiation readings: ");
+    scanf("%d", &n);
+
+    fp = fopen("radiation_log.txt", "w");
+    if (fp == NULL)
+    {
+        printf("Error opening file!");
+        getch();
+        return;
+    }
+    fprintf(fp, "Radiation Sensor Log\n");
+    fprintf(fp, "--------------------\n");
+
+    for (i = 0; i < n; i++)
+    {
+        printf("Enter radiation %d: ", i + 1);
+        scanf("%f", &sensor[i]);
+        fprintf(fp, "Radiation %d = %.2f\n", i + 1, sensor[i]);
+    }
+    fclose(fp);
+
+    printf("Radiation readings saved to 'radiation_log.txt'.\n");
+}
