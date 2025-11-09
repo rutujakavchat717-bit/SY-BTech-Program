@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <conio.h>
+void main()
+{
+    FILE *fp;
+    float sensor[20];
+    int n, i;
+
+    printf("Enter number of CPU load readings: ");
+    scanf("%d", &n);
+
+    fp = fopen("cpu_load_log.txt", "w");
+    if(fp == NULL)
+    {
+        printf("Error opening file!");
+        getch();
+        return;
+    }
+
+    fprintf(fp, "CPU Load Log\n");
+    fprintf(fp, "-------------\n");
+
+    for(i=0; i<n; i++)
+    {
+        printf("Enter CPU load %d: ", i+1);
+        scanf("%f", &sensor[i]);
+        fprintf(fp, "CPU Load %d = %.2f%%\n", i+1, sensor[i]);
+    }
+
+    fclose(fp);
+
+    printf("CPU load values saved to 'cpu_load_log.txt'.\n");
+}
