@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <conio.h>
+void main()
+{
+    FILE *fp;
+    float sensor[20];
+    int n, i;
+
+    printf("Enter number of solar readings: ");
+    scanf("%d", &n);
+
+    fp = fopen("solar_output_log.txt", "w");
+    if(fp == NULL)
+    {
+        printf("Error opening file!");
+        getch();
+        return;
+    }
+
+    fprintf(fp, "Solar Output Log\n");
+    fprintf(fp, "-----------------\n");
+
+    for(i=0; i<n; i++)
+    {
+        printf("Enter output %d: ", i+1);
+        scanf("%f", &sensor[i]);
+        fprintf(fp, "Output %d = %.2f W\n", i+1, sensor[i]);
+    }
+
+    fclose(fp);
+
+    printf("Solar output saved to 'solar_output_log.txt'.\n");
+}
