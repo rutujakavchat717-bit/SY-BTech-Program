@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main() 
+{
+    float eff[5] = {65.5, 70.3, 75.8, 80.4, 85.9};
+    float *ptr;
+    int i;
+
+    ptr = eff;
+
+    printf("Transmission Efficiency:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("eff[%d] = %.2f\n", i, eff[i]);
+    }
+
+    printf("\nPointer Output:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("Efficiency %d: %.2f%%\n", i+1, *(ptr+i));
+    }
+}
