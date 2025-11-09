@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <conio.h>
+void main()
+{
+    FILE *fp;
+    float sensor[20];
+    int n, i;
+
+    printf("Enter number of discharge readings: ");
+    scanf("%d", &n);
+
+    fp = fopen("battery_discharge_log.txt", "w");
+    if(fp == NULL)
+    {
+        printf("Error opening file!");
+        getch();
+        return;
+    }
+
+    fprintf(fp, "Battery Discharge Log\n");
+    fprintf(fp, "----------------------\n");
+
+    for(i=0; i<n; i++)
+    {
+        printf("Enter discharge %d: ", i+1);
+        scanf("%f", &sensor[i]);
+        fprintf(fp, "Discharge %d = %.2f%%\n", i+1, sensor[i]);
+    }
+
+    fclose(fp);
+
+    printf("Battery discharge saved to 'battery_discharge_log.txt'.\n");
+}
