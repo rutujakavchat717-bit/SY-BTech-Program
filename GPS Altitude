@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main() 
+{
+    float gpsAlt[5] = {120.5, 140.3, 165.2, 180.6, 200.0};
+    float *ptr;
+    int i;
+
+    ptr = gpsAlt;
+
+    printf("GPS Altitude Readings:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("gpsAlt[%d] = %.2f\n", i, gpsAlt[i]);
+    }
+
+    printf("\nPointer Output:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("Altitude %d: %.2f m\n", i+1, *(ptr+i));
+    }
+}
