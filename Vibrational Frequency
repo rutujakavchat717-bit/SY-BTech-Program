@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main() 
+{
+    float freq[5] = {12.0, 24.5, 36.2, 48.8, 60.1};
+    float *ptr;
+    int i;
+
+    ptr = freq;
+
+    printf("Vibrational Frequency:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("freq[%d] = %.2f\n", i, freq[i]);
+    }
+
+    printf("\nPointer Reading:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("Frequency %d: %.2f Hz\n", i+1, *(ptr+i));
+    }
+}
