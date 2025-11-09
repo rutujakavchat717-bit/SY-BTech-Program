@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <conio.h>
+void main()
+{
+    FILE *fp;
+    float sensor[20];
+    int n, i;
+
+    printf("Enter number of server load readings: ");
+    scanf("%d", &n);
+
+    fp = fopen("server_load_log.txt", "w");
+    if(fp == NULL)
+    {
+        printf("Error opening file!");
+        getch();
+        return;
+    }
+
+    fprintf(fp, "Server Load Log\n");
+    fprintf(fp, "----------------\n");
+
+    for(i=0; i<n; i++)
+    {
+        printf("Enter server load %d: ", i+1);
+        scanf("%f", &sensor[i]);
+        fprintf(fp, "Load %d = %.2f%%\n", i+1, sensor[i]);
+    }
+
+    fclose(fp);
+
+    printf("Server load saved to 'server_load_log.txt'.\n");
+}
