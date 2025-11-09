@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main() 
+{
+    float accel[5] = {0.92, 1.45, 2.88, 3.52, 4.10};
+    float *ptr;
+    int i;
+
+    ptr = accel;
+
+    printf("Robot Acceleration:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("accel[%d] = %.2f\n", i, accel[i]);
+    }
+
+    printf("\nPointer Readings:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("Acceleration %d: %.2f m/s^2\n", i+1, *(ptr+i));
+    }
+}
