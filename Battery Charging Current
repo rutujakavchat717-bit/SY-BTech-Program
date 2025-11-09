@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main() 
+{
+    float current[5] = {0.5, 1.2, 1.8, 2.4, 3.0};
+    float *ptr;
+    int i;
+
+    ptr = current;
+
+    printf("Charging Current:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("current[%d] = %.2f\n", i, current[i]);
+    }
+
+    printf("\nPointer Values:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("Current %d: %.2f A\n", i+1, *(ptr+i));
+    }
+}
