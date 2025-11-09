@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main() 
+{
+    float soilTemp[5] = {18.3, 20.6, 22.9, 25.4, 28.0};
+    float *ptr;
+    int i;
+
+    ptr = soilTemp;
+
+    printf("Soil Temperature:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("soilTemp[%d] = %.2f\n", i, soilTemp[i]);
+    }
+
+    printf("\nPointer Output:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("Temp %d: %.2f°C\n", i+1, *(ptr+i));
+    }
+}
