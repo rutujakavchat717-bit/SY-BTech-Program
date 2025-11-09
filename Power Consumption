@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main() 
+{
+    float power[5] = {5.5, 7.3, 9.2, 11.1, 13.5};
+    float *ptr;
+    int i;
+
+    ptr = power;
+
+    printf("Power Consumption:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("power[%d] = %.2f\n", i, power[i]);
+    }
+
+    printf("\nPointer Display:\n");
+    for(i=0; i<5; i++) 
+    {
+        printf("Consumption %d: %.2f W\n", i+1, *(ptr+i));
+    }
+}
